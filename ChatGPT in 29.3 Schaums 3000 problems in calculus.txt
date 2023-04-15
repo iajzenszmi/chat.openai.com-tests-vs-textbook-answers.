@@ -1,0 +1,41 @@
+
+
+29.33  Find the are length of the curve y = In cos x from (0, 0) to (π/3, –ln 2).
+
+To find the arc length of the curve defined by the equation y = ln(cos x) from (0, 0) to (π/3, -ln 2), we can use the arc length formula:
+
+L = ∫[a, b] √[1 + (dy/dx)^2] dx
+
+where a and b are the limits of integration, and dy/dx represents the derivative of y with respect to x.
+
+First, let's find dy/dx by taking the derivative of y = ln(cos x) using the chain rule:
+
+dy/dx = (1/cos x) * (-sin x)
+
+Next, let's substitute dy/dx and the given limits of integration into the arc length formula:
+
+L = ∫[0, π/3] √[1 + ((1/cos x) * (-sin x))^2] dx
+
+L = ∫[0, π/3] √[1 + sin^2(x)/cos^2(x)] dx
+
+L = ∫[0, π/3] √[(cos^2(x) + sin^2(x))/cos^2(x)] dx (using trigonometric identity cos^2(x) + sin^2(x) = 1)
+
+L = ∫[0, π/3] √[1/cos^2(x)] dx
+
+L = ∫[0, π/3] sec(x) dx
+
+Now, we can integrate sec(x) with respect to x:
+
+L = ln|sec(x) + tan(x)| + C (where C is the constant of integration)
+
+Finally, we can evaluate the definite integral from 0 to π/3 and substitute the given limits of integration:
+
+L = ln|sec(π/3) + tan(π/3)| - ln|sec(0) + tan(0)|
+
+L = ln|2 + √3| - ln|1|
+
+L = ln|2 + √3|
+
+So, the arc length of the curve y = ln(cos x) from (0, 0) to (π/3, -ln 2) is ln|2 + √3| units.
+ChatGPT Mar 23 Version. Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts.
+
