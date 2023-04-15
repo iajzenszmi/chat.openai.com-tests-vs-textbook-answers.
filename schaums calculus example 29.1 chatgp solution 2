@@ -1,0 +1,38 @@
+
+Ian Ajzenszmidt
+
+29.1  Find ∫ cos2 ax dx.
+
+To integrate the function ∫ cos^2(ax) dx, we can use a trigonometric identity. The identity we'll use is:
+
+cos^2(x) = 1/2 + 1/2 cos(2x)
+
+Using this identity, we can rewrite the integrand as follows:
+
+∫ cos^2(ax) dx = ∫ (1/2 + 1/2 cos(2ax)) dx
+
+Now we can integrate term by term:
+
+∫ (1/2 + 1/2 cos(2ax)) dx
+= (1/2) ∫ dx + (1/2) ∫ cos(2ax) dx
+
+The integral of a constant, such as 1/2, with respect to x is simply (1/2)x + C, where C is the constant of integration.
+
+To evaluate the integral of cos(2ax) with respect to x, we can use the substitution method. Let u = 2ax, then du = 2a dx. Solving for dx, we get dx = du / (2a). Substituting these expressions back into our integral, we get:
+
+(1/2) ∫ dx + (1/2) ∫ cos(2ax) dx
+= (1/2) (x + C) + (1/2) ∫ cos(u) du / (2a)
+
+The integral of cos(u) du is simply sin(u) + C, where C is the constant of integration. Substituting back for u, we get:
+
+(1/2) (x + C) + (1/2) ∫ cos(u) du / (2a)
+= (1/2) (x + C) + (1/4a) sin(2ax) + C'
+
+where C' is the constant of integration. So the final result of the integration is:
+
+∫ cos^2(ax) dx = (1/2) (x + C) + (1/4a) sin(2ax) + C' + K
+
+where C, C', and K are constants of integration.
+ChatGPT Mar 23 Version. Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts
+
+
