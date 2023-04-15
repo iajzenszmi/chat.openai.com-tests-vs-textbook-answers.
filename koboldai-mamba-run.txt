@@ -1,0 +1,1444 @@
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ espeak
+Hello,
+
+We're writing in reference to your Mathematics Stack Exchange:
+
+https://math.stackexchange.com/users/1170534/ian-martin-ajzenszmidt
+
+You have posted a number of answers which you attribute to ChatGPT. These answers all contain significant mathematical errors, which indicate that you either did not, or lack the background to, verify the correctness of these results. It is a violation of site policy to post content without verifying the correctness of that content.
+
+For details, please see https://math.meta.stackexchange.com/a/35347/ .
+
+Your account has been temporarily suspended for 7 days. While you’re suspended, your reputation will show as 1 but will be restored once the suspension ends.
+
+Regards,
+Mathematics Stack Exchange Moderation Team
+^C
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ gh repo clone KoboldAI/KoboldAI-Client
+Cloning into 'KoboldAI-Client'...
+remote: Enumerating objects: 6563, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 6563 (delta 8), reused 13 (delta 5), pack-reused 6540
+Receiving objects: 100% (6563/6563), 14.09 MiB | 5.58 MiB/s, done.
+Resolving deltas: 100% (4137/4137), done.
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ cd KoboldAI-Client
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ ls
+aiserver.py                   fileops.py                remote-play.bat
+breakmodel.py                 gensettings.py            requirements_mtj.txt
+bridge.lua                    install_requirements.bat  requirements.txt
+colab                         install_requirements.sh   static
+colabkobold.sh                Jupyter.bat               stories
+commandline.bat               koboldaiblue.ico          structures.py
+commandline-rocm.sh           koboldaigreen.ico         templates
+commandline.sh                koboldai.ico              test_aiserver.py
+cores                         LICENSE.md                torch_lazy_loader.py
+customsettings_template.json  logger.py                 tpu_mtj_backend.py
+disconnect-kobold-drive.bat   maps                      umamba.exe
+docker-cuda                   models                    Uninstall.bat
+docker-cuda.sh                play.bat                  update-koboldai.bat
+docker-rocm                   play-rocm.sh              userscripts
+docker-rocm.sh                play.sh                   utils.py
+docker-standalone             prompt_tuner.py           warpers.py
+environments                  pytest.ini
+extern                        README.md
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ ./install-requirements.sh
+bash: ./install-requirements.sh: No such file or directory
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ ./install_requirements.sh
+Please specify either CUDA or ROCM
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ ./install_requirements.sh CUDA
+Please specify either CUDA or ROCM
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ ./docker-cuda.sh
+non-network local connections being added to access control list
+/snap/docker/2746/lib/python3.6/site-packages/paramiko/transport.py:32: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography (40.0) will be the last to support Python 3.6.
+  from cryptography.hazmat.backends import default_backend
+Traceback (most recent call last):
+  File "/snap/docker/2746/lib/python3.6/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/snap/docker/2746/lib/python3.6/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 1046, in _send_output
+    self.send(msg)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 984, in send
+    self.connect()
+  File "/snap/docker/2746/lib/python3.6/site-packages/docker/transport/unixconn.py", line 30, in connect
+    sock.connect(self.unix_socket)
+PermissionError: [Errno 13] Permission denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snap/docker/2746/lib/python3.6/site-packages/requests/adapters.py", line 450, in send
+    timeout=timeout
+  File "/snap/docker/2746/lib/python3.6/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/snap/docker/2746/lib/python3.6/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/snap/docker/2746/lib/python3.6/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/snap/docker/2746/lib/python3.6/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/snap/docker/2746/lib/python3.6/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 1046, in _send_output
+    self.send(msg)
+  File "/snap/docker/2746/usr/lib/python3.6/http/client.py", line 984, in send
+    self.connect()
+  File "/snap/docker/2746/lib/python3.6/site-packages/docker/transport/unixconn.py", line 30, in connect
+    sock.connect(self.unix_socket)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', PermissionError(13, 'Permission denied'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snap/docker/2746/lib/python3.6/site-packages/docker/api/client.py", line 214, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+  File "/snap/docker/2746/lib/python3.6/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+  File "/snap/docker/2746/lib/python3.6/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+  File "/snap/docker/2746/lib/python3.6/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+  File "/snap/docker/2746/lib/python3.6/site-packages/requests/sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "/snap/docker/2746/lib/python3.6/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/snap/docker/2746/lib/python3.6/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/snap/docker/2746/lib/python3.6/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', PermissionError(13, 'Permission denied'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snap/docker/2746/bin/docker-compose", line 33, in <module>
+    sys.exit(load_entry_point('docker-compose==1.29.2', 'console_scripts', 'docker-compose')())
+  File "/snap/docker/2746/lib/python3.6/site-packages/compose/cli/main.py", line 81, in main
+    command_func()
+  File "/snap/docker/2746/lib/python3.6/site-packages/compose/cli/main.py", line 200, in perform_command
+    project = project_from_options('.', options)
+  File "/snap/docker/2746/lib/python3.6/site-packages/compose/cli/command.py", line 70, in project_from_options
+    enabled_profiles=get_profiles_from_options(options, environment)
+  File "/snap/docker/2746/lib/python3.6/site-packages/compose/cli/command.py", line 153, in get_project
+    verbose=verbose, version=api_version, context=context, environment=environment
+  File "/snap/docker/2746/lib/python3.6/site-packages/compose/cli/docker_client.py", line 43, in get_client
+    environment=environment, tls_version=get_tls_version(environment)
+  File "/snap/docker/2746/lib/python3.6/site-packages/compose/cli/docker_client.py", line 170, in docker_client
+    client = APIClient(use_ssh_client=not use_paramiko_ssh, **kwargs)
+  File "/snap/docker/2746/lib/python3.6/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+  File "/snap/docker/2746/lib/python3.6/site-packages/docker/api/client.py", line 222, in _retrieve_server_version
+    f'Error while fetching server API version: {e}'
+docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', PermissionError(13, 'Permission denied'))
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ sudo ./docker-cuda.sh
+[sudo] password for ian: 
+non-network local connections being added to access control list
+/snap/docker/2746/lib/python3.6/site-packages/paramiko/transport.py:32: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography (40.0) will be the last to support Python 3.6.
+  from cryptography.hazmat.backends import default_backend
+Building koboldai
+Step 1/6 : FROM mambaorg/micromamba
+latest: Pulling from mambaorg/micromamba
+26c5c85e47da: Pull complete
+d3b150740319: Pull complete
+4d40427aa016: Pull complete
+4f4fb700ef54: Pull complete
+71d1a88ac51d: Pull complete
+7c18221628aa: Pull complete
+127d71203127: Pull complete
+ce276babb686: Pull complete
+3bd712ddac22: Pull complete
+2f3bbf44843b: Pull complete
+Digest: sha256:a0c9e8ba366eec4aed1a87f6eb5c326f7a1d2025316a55b0a93782c54a315998
+Status: Downloaded newer image for mambaorg/micromamba:latest
+ ---> 2a79977f8a1a
+Step 2/6 : WORKDIR /content/
+ ---> Running in 77b76d4fda1f
+Removing intermediate container 77b76d4fda1f
+ ---> 73242dedd228
+Step 3/6 : COPY env.yml /home/micromamba/env.yml
+ ---> ce5acfed6808
+Step 4/6 : RUN micromamba install -y -n base -f /home/micromamba/env.yml
+ ---> Running in b1c51c9caba2
+
+                                           __
+          __  ______ ___  ____ _____ ___  / /_  ____ _
+         / / / / __ `__ \/ __ `/ __ `__ \/ __ \/ __ `/
+        / /_/ / / / / / / /_/ / / / / / / /_/ / /_/ /
+       / .___/_/ /_/ /_/\__,_/_/ /_/ /_/_.___/\__,_/
+      /_/
+
+
+Transaction
+
+  Prefix: /opt/conda
+
+  Updating specs:
+
+   - colorama
+   - flask-socketio=5.3.2
+   - flask-session=0.4.0
+   - python-socketio=5.7.2
+   - pytorch=1.11
+   - python=3.8
+   - cudatoolkit=11.1
+   - eventlet=0.33.3
+   - dnspython=2.2.1
+   - markdown
+   - bleach=4.1.0
+   - pip
+   - git=2.35.1
+   - sentencepiece
+   - protobuf
+   - marshmallow[version='>=3.13']
+   - apispec-webframeworks
+   - loguru
+   - termcolor
+   - psutil
+
+
+  Package                       Version  Build                        Channel                   Size
+??????????????????????????????????????????????????????????????????????????????????????????????????????
+  Install:
+??????????????????????????????????????????????????????????????????????????????????????????????????????
+
+  + _libgcc_mutex                   0.1  conda_forge                  conda-forge/linux-64       3kB
+  + _openmp_mutex                   4.5  2_gnu                        conda-forge/linux-64      24kB
+  + apispec                       5.2.2  pyhd8ed1ab_0                 conda-forge/noarch        27kB
+  + apispec-webframeworks         0.5.2  pyhd8ed1ab_4                 conda-forge/noarch        13kB
+  + bidict                       0.22.1  pyhd8ed1ab_0                 conda-forge/noarch        33kB
+  + blas                           2.16  mkl                          conda-forge/linux-64      11kB
+  + bleach                        4.1.0  pyhd8ed1ab_0                 conda-forge/noarch       124kB
+  + bzip2                         1.0.8  h7f98852_4                   conda-forge/linux-64     496kB
+  + c-ares                       1.18.1  h7f98852_0                   conda-forge/linux-64     115kB
+  + ca-certificates           2022.12.7  ha878542_0                   conda-forge/linux-64     146kB
+  + cachelib                     0.10.2  pyhd8ed1ab_0                 conda-forge/noarch        20kB
+  + cffi                         1.15.1  py38h4a40e3a_3               conda-forge/linux-64     235kB
+  + click                         8.1.3  unix_pyhd8ed1ab_2            conda-forge/noarch        76kB
+  + colorama                      0.4.6  pyhd8ed1ab_0                 conda-forge/noarch        25kB
+  + cryptography                 40.0.2  py38h3d167d9_0               conda-forge/linux-64       2MB
+  + cudatoolkit                  11.1.1  ha002fc5_11                  conda-forge/linux-64     873MB
+  + curl                          8.0.1  h588be90_0                   conda-forge/linux-64      90kB
+  + dnspython                     2.2.1  pyhd8ed1ab_0                 conda-forge/noarch       139kB
+  + eventlet                     0.33.3  pyhd8ed1ab_0                 conda-forge/noarch       173kB
+  + expat                         2.5.0  hcb278e6_1                   conda-forge/linux-64     137kB
+  + flask                         2.2.3  pyhd8ed1ab_0                 conda-forge/noarch        83kB
+  + flask-session                 0.4.0  pyhd8ed1ab_0                 conda-forge/noarch        11kB
+  + flask-socketio                5.3.2  pyhd8ed1ab_0                 conda-forge/noarch        21kB
+  + gettext                      0.21.1  h27087fc_0                   conda-forge/linux-64       4MB
+  + git                          2.35.1  pl5321h04cb727_0             conda-forge/linux-64      14MB
+  + greenlet                      2.0.2  py38h8dc9893_0               conda-forge/linux-64     190kB
+  + idna                            3.4  pyhd8ed1ab_0                 conda-forge/noarch        57kB
+  + importlib-metadata            6.4.0  pyha770c72_0                 conda-forge/noarch        25kB
+  + intel-openmp               2023.0.0  h9e868ea_25371               pkgs/main/linux-64        16MB
+  + itsdangerous                  2.1.2  pyhd8ed1ab_0                 conda-forge/noarch        16kB
+  + jinja2                        3.1.2  pyhd8ed1ab_1                 conda-forge/noarch       101kB
+  + keyutils                      1.6.1  h166bdaf_0                   conda-forge/linux-64     118kB
+  + krb5                         1.20.1  h81ceb04_0                   conda-forge/linux-64       1MB
+  + ld_impl_linux-64               2.40  h41732ed_0                   conda-forge/linux-64     705kB
+  + libabseil                20230125.0  cxx17_hcb278e6_1             conda-forge/linux-64       1MB
+  + libblas                       3.8.0  16_mkl                       conda-forge/linux-64      11kB
+  + libcblas                      3.8.0  16_mkl                       conda-forge/linux-64      11kB
+  + libcurl                       8.0.1  h588be90_0                   conda-forge/linux-64     361kB
+  + libedit                3.1.20191231  he28a2e2_2                   conda-forge/linux-64     124kB
+  + libev                          4.33  h516909a_1                   conda-forge/linux-64     106kB
+  + libexpat                      2.5.0  hcb278e6_1                   conda-forge/linux-64      78kB
+  + libffi                        3.4.2  h7f98852_5                   conda-forge/linux-64      58kB
+  + libgcc-ng                    12.2.0  h65d4601_19                  conda-forge/linux-64     954kB
+  + libgfortran-ng                7.5.0  h14aa051_20                  conda-forge/linux-64      23kB
+  + libgfortran4                  7.5.0  h14aa051_20                  conda-forge/linux-64       1MB
+  + libgomp                      12.2.0  h65d4601_19                  conda-forge/linux-64     466kB
+  + libiconv                       1.17  h166bdaf_0                   conda-forge/linux-64       1MB
+  + liblapack                     3.8.0  16_mkl                       conda-forge/linux-64      11kB
+  + liblapacke                    3.8.0  16_mkl                       conda-forge/linux-64      11kB
+  + libnghttp2                   1.52.0  h61bc06f_0                   conda-forge/linux-64     622kB
+  + libnsl                        2.0.0  h7f98852_0                   conda-forge/linux-64      31kB
+  + libprotobuf                 3.21.12  h3eb15da_0                   conda-forge/linux-64       2MB
+  + libsentencepiece             0.1.97  h47aad16_1                   conda-forge/linux-64     823kB
+  + libsqlite                    3.40.0  h753d276_0                   conda-forge/linux-64     810kB
+  + libssh2                      1.10.0  hf14f497_3                   conda-forge/linux-64     239kB
+  + libstdcxx-ng                 12.2.0  h46fd767_19                  conda-forge/linux-64       4MB
+  + libuuid                      2.38.1  h0b41bf4_0                   conda-forge/linux-64      34kB
+  + libuv                        1.44.2  h166bdaf_0                   conda-forge/linux-64       1MB
+  + libzlib                      1.2.13  h166bdaf_4                   conda-forge/linux-64      66kB
+  + loguru                        0.7.0  py38h578d9bd_0               conda-forge/linux-64      94kB
+  + markdown                      3.4.3  pyhd8ed1ab_0                 conda-forge/noarch        71kB
+  + markupsafe                    2.1.2  py38h1de0b5d_0               conda-forge/linux-64      23kB
+  + marshmallow                  3.19.0  pyhd8ed1ab_0                 conda-forge/noarch        85kB
+  + mkl                          2020.2  256                          pkgs/main/linux-64       145MB
+  + ncurses                         6.3  h27087fc_1                   conda-forge/linux-64       1MB
+  + openssl                       3.1.0  h0b41bf4_0                   conda-forge/linux-64       3MB
+  + packaging                      23.1  pyhd8ed1ab_0                 conda-forge/noarch        46kB
+  + pcre2                         10.37  hc3806b6_1                   conda-forge/linux-64       1MB
+  + perl                         5.32.1  2_h7f98852_perl5             conda-forge/linux-64      15MB
+  + pip                            23.1  pyhd8ed1ab_0                 conda-forge/noarch         1MB
+  + protobuf                    4.21.12  py38h8dc9893_0               conda-forge/linux-64     323kB
+  + psutil                        5.9.4  py38h0a891b7_0               conda-forge/linux-64     357kB
+  + pycparser                      2.21  pyhd8ed1ab_0                 conda-forge/noarch       103kB
+  + pyopenssl                    23.1.1  pyhd8ed1ab_0                 conda-forge/noarch       128kB
+  + python                       3.8.16  he550d4f_1_cpython           conda-forge/linux-64      23MB
+  + python-engineio               4.4.0  pyhd8ed1ab_0                 conda-forge/noarch        37kB
+  + python-socketio               5.7.2  pyhd8ed1ab_0                 conda-forge/noarch        36kB
+  + python_abi                      3.8  3_cp38                       conda-forge/linux-64       6kB
+  + pytorch                      1.11.0  py3.8_cuda11.1_cudnn8.0.5_0  pytorch/linux-64           1GB
+  + pytorch-mutex                   1.0  cuda                         pytorch/noarch             3kB
+  + pyyaml                          6.0  py38h0a891b7_5               conda-forge/linux-64     187kB
+  + readline                        8.2  h8228510_1                   conda-forge/linux-64     281kB
+  + sentencepiece                0.1.97  h578d9bd_1                   conda-forge/linux-64      31kB
+  + sentencepiece-python         0.1.97  py38h0c9c4f8_1               conda-forge/linux-64       2MB
+  + sentencepiece-spm            0.1.97  h47aad16_1                   conda-forge/linux-64      85kB
+  + setuptools                   67.6.1  pyhd8ed1ab_0                 conda-forge/noarch       580kB
+  + six                          1.16.0  pyh6c4a22f_0                 conda-forge/noarch        14kB
+  + termcolor                     2.2.0  pyhd8ed1ab_0                 conda-forge/noarch        11kB
+  + tk                           8.6.12  h27826a3_0                   conda-forge/linux-64       3MB
+  + typing_extensions             4.5.0  pyha770c72_0                 conda-forge/noarch        31kB
+  + webencodings                  0.5.1  py_1                         conda-forge/noarch        12kB
+  + werkzeug                      2.2.3  pyhd8ed1ab_0                 conda-forge/noarch       253kB
+  + wheel                        0.40.0  pyhd8ed1ab_0                 conda-forge/noarch        56kB
+  + xz                            5.2.6  h166bdaf_0                   conda-forge/linux-64     418kB
+  + yaml                          0.2.5  h7f98852_2                   conda-forge/linux-64      89kB
+  + zipp                         3.15.0  pyhd8ed1ab_0                 conda-forge/noarch        17kB
+  + zlib                         1.2.13  h166bdaf_4                   conda-forge/linux-64      94kB
+  + zstd                          1.5.2  h3eb15da_6                   conda-forge/linux-64     420kB
+
+  Summary:
+
+  Install: 98 packages
+
+  Total download: 3GB
+
+??????????????????????????????????????????????????????????????????????????????????????????????????????
+
+
+
+Transaction starting
+Linking pytorch-mutex-1.0-cuda
+Linking _libgcc_mutex-0.1-conda_forge
+Linking libstdcxx-ng-12.2.0-h46fd767_19
+Linking python_abi-3.8-3_cp38
+Linking ld_impl_linux-64-2.40-h41732ed_0
+Linking ca-certificates-2022.12.7-ha878542_0
+Linking libgfortran4-7.5.0-h14aa051_20
+Linking libgomp-12.2.0-h65d4601_19
+Linking libgfortran-ng-7.5.0-h14aa051_20
+Linking _openmp_mutex-4.5-2_gnu
+Linking libgcc-ng-12.2.0-h65d4601_19
+Linking libuv-1.44.2-h166bdaf_0
+Linking libev-4.33-h516909a_1
+Linking c-ares-1.18.1-h7f98852_0
+Linking libiconv-1.17-h166bdaf_0
+Linking gettext-0.21.1-h27087fc_0
+Linking libexpat-2.5.0-hcb278e6_1
+Linking keyutils-1.6.1-h166bdaf_0
+Linking yaml-0.2.5-h7f98852_2
+Linking xz-5.2.6-h166bdaf_0
+Linking ncurses-6.3-h27087fc_1
+Linking libuuid-2.38.1-h0b41bf4_0
+Linking libnsl-2.0.0-h7f98852_0
+Linking libffi-3.4.2-h7f98852_5
+Linking bzip2-1.0.8-h7f98852_4
+Linking libabseil-20230125.0-cxx17_hcb278e6_1
+Linking openssl-3.1.0-h0b41bf4_0
+Linking cudatoolkit-11.1.1-ha002fc5_11
+By downloading and using the CUDA Toolkit conda packages, you accept the terms and conditions of the CUDA End User License Agreement (EULA): https://docs.nvidia.com/cuda/eula/index.html
+
+Linking libzlib-1.2.13-h166bdaf_4
+Linking expat-2.5.0-hcb278e6_1
+Linking libedit-3.1.20191231-he28a2e2_2
+Linking readline-8.2-h8228510_1
+Linking perl-5.32.1-2_h7f98852_perl5
+Linking zstd-1.5.2-h3eb15da_6
+Linking libssh2-1.10.0-hf14f497_3
+Linking pcre2-10.37-hc3806b6_1
+Linking libnghttp2-1.52.0-h61bc06f_0
+Linking tk-8.6.12-h27826a3_0
+Linking libprotobuf-3.21.12-h3eb15da_0
+Linking zlib-1.2.13-h166bdaf_4
+Linking libsqlite-3.40.0-h753d276_0
+Linking krb5-1.20.1-h81ceb04_0
+Linking libsentencepiece-0.1.97-h47aad16_1
+Linking python-3.8.16-he550d4f_1_cpython
+Linking libcurl-8.0.1-h588be90_0
+Linking sentencepiece-spm-0.1.97-h47aad16_1
+Linking curl-8.0.1-h588be90_0
+Linking git-2.35.1-pl5321h04cb727_0
+Linking intel-openmp-2023.0.0-h9e868ea_25371
+Linking mkl-2020.2-256
+Linking wheel-0.40.0-pyhd8ed1ab_0
+Linking setuptools-67.6.1-pyhd8ed1ab_0
+Linking pip-23.1-pyhd8ed1ab_0
+Linking typing_extensions-4.5.0-pyha770c72_0
+Linking pycparser-2.21-pyhd8ed1ab_0
+Linking webencodings-0.5.1-py_1
+Linking idna-3.4-pyhd8ed1ab_0
+Linking cachelib-0.10.2-pyhd8ed1ab_0
+Linking packaging-23.1-pyhd8ed1ab_0
+Linking python-engineio-4.4.0-pyhd8ed1ab_0
+Linking bidict-0.22.1-pyhd8ed1ab_0
+Linking six-1.16.0-pyh6c4a22f_0
+Linking itsdangerous-2.1.2-pyhd8ed1ab_0
+Linking click-8.1.3-unix_pyhd8ed1ab_2
+Linking zipp-3.15.0-pyhd8ed1ab_0
+Linking termcolor-2.2.0-pyhd8ed1ab_0
+Linking colorama-0.4.6-pyhd8ed1ab_0
+Linking marshmallow-3.19.0-pyhd8ed1ab_0
+Linking python-socketio-5.7.2-pyhd8ed1ab_0
+Linking bleach-4.1.0-pyhd8ed1ab_0
+Linking importlib-metadata-6.4.0-pyha770c72_0
+Linking markdown-3.4.3-pyhd8ed1ab_0
+Linking libblas-3.8.0-16_mkl
+Linking pyyaml-6.0-py38h0a891b7_5
+Linking markupsafe-2.1.2-py38h1de0b5d_0
+Linking greenlet-2.0.2-py38h8dc9893_0
+Linking psutil-5.9.4-py38h0a891b7_0
+Linking loguru-0.7.0-py38h578d9bd_0
+Linking protobuf-4.21.12-py38h8dc9893_0
+Linking sentencepiece-python-0.1.97-py38h0c9c4f8_1
+Linking cffi-1.15.1-py38h4a40e3a_3
+Linking liblapack-3.8.0-16_mkl
+Linking libcblas-3.8.0-16_mkl
+Linking sentencepiece-0.1.97-h578d9bd_1
+Linking cryptography-40.0.2-py38h3d167d9_0
+Linking liblapacke-3.8.0-16_mkl
+Linking blas-2.16-mkl
+Linking apispec-5.2.2-pyhd8ed1ab_0
+Linking werkzeug-2.2.3-pyhd8ed1ab_0
+Linking jinja2-3.1.2-pyhd8ed1ab_1
+Linking pyopenssl-23.1.1-pyhd8ed1ab_0
+Linking dnspython-2.2.1-pyhd8ed1ab_0
+Linking apispec-webframeworks-0.5.2-pyhd8ed1ab_4
+Linking flask-2.2.3-pyhd8ed1ab_0
+Linking eventlet-0.33.3-pyhd8ed1ab_0
+Linking flask-session-0.4.0-pyhd8ed1ab_0
+Linking flask-socketio-5.3.2-pyhd8ed1ab_0
+Linking pytorch-1.11.0-py3.8_cuda11.1_cudnn8.0.5_0
+
+Transaction finished
+
+To activate this environment, use:
+
+    $ [micro]mamba activate <environment>
+
+Or to execute a single command in this environment, use:
+
+    $ [micro]mamba run -n <environment> mycommand
+
+
+Installing pip packages: flask-cloudflared==0.0.10, flask-ngrok, lupa==1.10, transformers==4.24.0, huggingface_hub==0.12.1, safetensors, accelerate, git+https://github.com/VE-FORBRYDERNE/mkultra
+error    libmamba Error opening for writing "/home/micromamba/mambaf6psVRQ7I3q": Permission denied
+error    libmamba Error opening for writing "/home/micromamba/mambaf6psVRQ7I3q": Permission denied
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: '/home/micromamba/mambaf6psVRQ7I3q'
+critical libmamba pip failed to install packages
+ERROR: Service 'koboldai' failed to build : The command '/usr/local/bin/_dockerfile_shell.sh micromamba install -y -n base -f /home/micromamba/env.yml' returned a non-zero code: 1
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ apt-cache search koboldap
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ apt-cache search kobolda1
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ apt-cache search koboldai
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ apt-cache search libmamba
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ apt-cache search mamba
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ sudo apt update
+Get:1 file:/var/cuda-repo-ubuntu2204-12-1-local  InRelease [1,572 B]
+Get:1 file:/var/cuda-repo-ubuntu2204-12-1-local  InRelease [1,572 B]
+Hit:2 http://au.archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://au.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]     
+Get:4 http://au.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]   
+Hit:5 http://dl.google.com/linux/earth/deb stable InRelease                    
+Hit:6 https://dl.google.com/linux/chrome/deb stable InRelease                  
+Get:7 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]      
+Hit:8 https://packages.microsoft.com/repos/edge stable InRelease              
+Get:9 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [995 kB]
+Get:10 http://au.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [471 kB]
+Get:11 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [101 kB]
+Get:12 http://au.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [608 kB]
+Get:13 http://au.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [900 kB]
+Get:14 http://au.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [270 kB]
+Get:15 http://au.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:16 http://au.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [8,004 B]
+Get:17 http://au.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [12.5 kB]
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [41.5 kB]
+Get:19 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [18.5 kB]
+Fetched 3,763 kB in 2s (1,706 kB/s)           
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+27 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  libflashrom1 libftdi1-2 libllvm13
+Use 'sudo apt autoremove' to remove them.
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  python2.7-minimal libavcodec-extra libjs-jquery-ui libavdevice58 ffmpeg
+  libpostproc55 libavcodec-extra58 libavutil56 libswscale5 libswresample3
+  libavformat58 python2.7 libpython2.7-minimal libpython2.7-stdlib
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages have been kept back:
+  gnome-remote-desktop
+The following packages will be upgraded:
+  apport apport-gtk ghostscript ghostscript-x google-chrome-stable im-config
+  libgs9 libgs9-common libldap-2.5-0 libldap-2.5-0:i386 libldap-common
+  libllvm15 libllvm15:i386 microsoft-edge-stable python3-apport
+  python3-problem-report python3-tz thunderbird thunderbird-gnome-support
+  thunderbird-locale-en thunderbird-locale-en-us tzdata xserver-common
+  xserver-xephyr xserver-xorg-core xserver-xorg-legacy
+26 to upgrade, 0 to newly install, 0 to remove and 1 not to upgrade.
+13 standard LTS security updates
+Need to get 293 MB/363 MB of archives.
+After this operation, 1,075 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 im-config all 0.50-2ubuntu22.04.1 [27.8 kB]
+Get:2 http://au.archive.ubuntu.com/ubuntu jammy-updates/main i386 libldap-2.5-0 i386 2.5.14+dfsg-0ubuntu0.22.04.2 [198 kB]
+Get:3 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.14+dfsg-0ubuntu0.22.04.2 [183 kB]
+Get:4 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.14+dfsg-0ubuntu0.22.04.2 [15.8 kB]
+Get:5 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libllvm15 amd64 1:15.0.7-0ubuntu0.22.04.1 [25.4 MB]
+Get:6 https://dl.google.com/linux/chrome/deb stable/main amd64 google-chrome-stable amd64 112.0.5615.121-1 [93.8 MB]
+Get:7 https://packages.microsoft.com/repos/edge stable/main amd64 microsoft-edge-stable amd64 112.0.1722.48-1 [142 MB]
+Get:8 http://au.archive.ubuntu.com/ubuntu jammy-updates/main i386 libllvm15 i386 1:15.0.7-0ubuntu0.22.04.1 [29.0 MB]
+Get:9 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-tz all 2022.1-1ubuntu0.22.04.1 [30.7 kB]
+Get:10 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 xserver-common all 2:21.1.4-2ubuntu1.7~22.04.1 [28.0 kB]
+Get:11 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 xserver-xephyr amd64 2:21.1.4-2ubuntu1.7~22.04.1 [1,012 kB]
+Get:12 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 xserver-xorg-legacy amd64 2:21.1.4-2ubuntu1.7~22.04.1 [34.7 kB]
+Get:13 http://au.archive.ubuntu.com/ubuntu jammy-updates/main amd64 xserver-xorg-core amd64 2:21.1.4-2ubuntu1.7~22.04.1 [1,476 kB]
+Fetched 293 MB in 18s (16.4 MB/s)                                              
+Preconfiguring packages ...
+setting xserver-xorg-legacy/xwrapper/allowed_users from configuration file
+(Reading database ... 364922 files and directories currently installed.)
+Preparing to unpack .../00-google-chrome-stable_112.0.5615.121-1_amd64.deb ...
+Unpacking google-chrome-stable (112.0.5615.121-1) over (112.0.5615.49-1) ...
+Preparing to unpack .../01-microsoft-edge-stable_112.0.1722.48-1_amd64.deb ...
+Unpacking microsoft-edge-stable (112.0.1722.48-1) over (112.0.1722.39-1) ...
+Preparing to unpack .../02-tzdata_2023c-0ubuntu0.22.04.0_all.deb ...
+Unpacking tzdata (2023c-0ubuntu0.22.04.0) over (2022g-0ubuntu0.22.04.1) ...
+Preparing to unpack .../03-python3-problem-report_2.20.11-0ubuntu82.4_all.deb ..
+.
+Unpacking python3-problem-report (2.20.11-0ubuntu82.4) over (2.20.11-0ubuntu82.3
+) ...
+Preparing to unpack .../04-python3-apport_2.20.11-0ubuntu82.4_all.deb ...
+Unpacking python3-apport (2.20.11-0ubuntu82.4) over (2.20.11-0ubuntu82.3) ...
+Preparing to unpack .../05-apport_2.20.11-0ubuntu82.4_all.deb ...
+Unpacking apport (2.20.11-0ubuntu82.4) over (2.20.11-0ubuntu82.3) ...
+Preparing to unpack .../06-apport-gtk_2.20.11-0ubuntu82.4_all.deb ...
+Unpacking apport-gtk (2.20.11-0ubuntu82.4) over (2.20.11-0ubuntu82.3) ...
+Preparing to unpack .../07-ghostscript-x_9.55.0~dfsg1-0ubuntu5.2_amd64.deb ...
+Unpacking ghostscript-x (9.55.0~dfsg1-0ubuntu5.2) over (9.55.0~dfsg1-0ubuntu5.1)
+ ...
+Preparing to unpack .../08-ghostscript_9.55.0~dfsg1-0ubuntu5.2_amd64.deb ...
+Unpacking ghostscript (9.55.0~dfsg1-0ubuntu5.2) over (9.55.0~dfsg1-0ubuntu5.1) .
+..
+Preparing to unpack .../09-libgs9_9.55.0~dfsg1-0ubuntu5.2_amd64.deb ...
+Unpacking libgs9:amd64 (9.55.0~dfsg1-0ubuntu5.2) over (9.55.0~dfsg1-0ubuntu5.1) 
+...
+Preparing to unpack .../10-libgs9-common_9.55.0~dfsg1-0ubuntu5.2_all.deb ...
+Unpacking libgs9-common (9.55.0~dfsg1-0ubuntu5.2) over (9.55.0~dfsg1-0ubuntu5.1)
+ ...
+Preparing to unpack .../11-im-config_0.50-2ubuntu22.04.1_all.deb ...
+Unpacking im-config (0.50-2ubuntu22.04.1) over (0.50-2) ...
+Preparing to unpack .../12-libldap-2.5-0_2.5.14+dfsg-0ubuntu0.22.04.2_amd64.deb 
+...
+De-configuring libldap-2.5-0:i386 (2.5.14+dfsg-0ubuntu0.22.04.1), to allow confi
+guration of libldap-2.5-0:amd64 (2.5.14+dfsg-0ubuntu0.22.04.1) ...
+Unpacking libldap-2.5-0:amd64 (2.5.14+dfsg-0ubuntu0.22.04.2) over (2.5.14+dfsg-0
+ubuntu0.22.04.1) ...
+Preparing to unpack .../13-libldap-2.5-0_2.5.14+dfsg-0ubuntu0.22.04.2_i386.deb .
+..
+Unpacking libldap-2.5-0:i386 (2.5.14+dfsg-0ubuntu0.22.04.2) over (2.5.14+dfsg-0u
+buntu0.22.04.1) ...
+Preparing to unpack .../14-libldap-common_2.5.14+dfsg-0ubuntu0.22.04.2_all.deb .
+..
+Unpacking libldap-common (2.5.14+dfsg-0ubuntu0.22.04.2) over (2.5.14+dfsg-0ubunt
+u0.22.04.1) ...
+Preparing to unpack .../15-libllvm15_1%3a15.0.7-0ubuntu0.22.04.1_amd64.deb ...
+De-configuring libllvm15:i386 (1:15.0.6-3~ubuntu0.22.04.2), to allow configurati
+on of libllvm15:amd64 (1:15.0.6-3~ubuntu0.22.04.2) ...
+Unpacking libllvm15:amd64 (1:15.0.7-0ubuntu0.22.04.1) over (1:15.0.6-3~ubuntu0.2
+2.04.2) ...
+Preparing to unpack .../16-libllvm15_1%3a15.0.7-0ubuntu0.22.04.1_i386.deb ...
+Unpacking libllvm15:i386 (1:15.0.7-0ubuntu0.22.04.1) over (1:15.0.6-3~ubuntu0.22
+.04.2) ...
+Preparing to unpack .../17-python3-tz_2022.1-1ubuntu0.22.04.1_all.deb ...
+Unpacking python3-tz (2022.1-1ubuntu0.22.04.1) over (2022.1-1ubuntu0.22.04.0) ..
+.
+Preparing to unpack .../18-thunderbird-locale-en_1%3a102.10.0+build2-0ubuntu0.22
+.04.1_amd64.deb ...
+Unpacking thunderbird-locale-en (1:102.10.0+build2-0ubuntu0.22.04.1) over (1:102
+.9.0+build1-0ubuntu0.22.04.1) ...
+Preparing to unpack .../19-thunderbird_1%3a102.10.0+build2-0ubuntu0.22.04.1_amd6
+4.deb ...
+Unpacking thunderbird (1:102.10.0+build2-0ubuntu0.22.04.1) over (1:102.9.0+build
+1-0ubuntu0.22.04.1) ...
+Preparing to unpack .../20-thunderbird-gnome-support_1%3a102.10.0+build2-0ubuntu
+0.22.04.1_amd64.deb ...
+Unpacking thunderbird-gnome-support (1:102.10.0+build2-0ubuntu0.22.04.1) over (1
+:102.9.0+build1-0ubuntu0.22.04.1) ...
+Preparing to unpack .../21-thunderbird-locale-en-us_1%3a102.10.0+build2-0ubuntu0
+.22.04.1_all.deb ...
+Unpacking thunderbird-locale-en-us (1:102.10.0+build2-0ubuntu0.22.04.1) over (1:
+102.9.0+build1-0ubuntu0.22.04.1) ...
+Preparing to unpack .../22-xserver-common_2%3a21.1.4-2ubuntu1.7~22.04.1_all.deb 
+...
+Unpacking xserver-common (2:21.1.4-2ubuntu1.7~22.04.1) over (2:21.1.3-2ubuntu2.9
+) ...
+Preparing to unpack .../23-xserver-xephyr_2%3a21.1.4-2ubuntu1.7~22.04.1_amd64.de
+b ...
+Unpacking xserver-xephyr (2:21.1.4-2ubuntu1.7~22.04.1) over (2:21.1.3-2ubuntu2.9
+) ...
+Preparing to unpack .../24-xserver-xorg-legacy_2%3a21.1.4-2ubuntu1.7~22.04.1_amd
+64.deb ...
+Unpacking xserver-xorg-legacy (2:21.1.4-2ubuntu1.7~22.04.1) over (2:21.1.3-2ubun
+tu2.9) ...
+Preparing to unpack .../25-xserver-xorg-core_2%3a21.1.4-2ubuntu1.7~22.04.1_amd64
+.deb ...
+Unpacking xserver-xorg-core (2:21.1.4-2ubuntu1.7~22.04.1) over (2:21.1.3-2ubuntu
+2.9) ...
+Setting up microsoft-edge-stable (112.0.1722.48-1) ...
+Setting up libgs9-common (9.55.0~dfsg1-0ubuntu5.2) ...
+Setting up google-chrome-stable (112.0.5615.121-1) ...
+Setting up libgs9:amd64 (9.55.0~dfsg1-0ubuntu5.2) ...
+Setting up python3-problem-report (2.20.11-0ubuntu82.4) ...
+Setting up ghostscript (9.55.0~dfsg1-0ubuntu5.2) ...
+Setting up libldap-common (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Setting up libldap-2.5-0:amd64 (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Setting up libldap-2.5-0:i386 (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Setting up python3-apport (2.20.11-0ubuntu82.4) ...
+Setting up tzdata (2023c-0ubuntu0.22.04.0) ...
+
+Current default time zone: 'Australia/Melbourne'
+Local time is now:      Sun Apr 16 04:15:29 AEST 2023.
+Universal Time is now:  Sat Apr 15 18:15:29 UTC 2023.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up im-config (0.50-2ubuntu22.04.1) ...
+Setting up libllvm15:amd64 (1:15.0.7-0ubuntu0.22.04.1) ...
+Setting up libllvm15:i386 (1:15.0.7-0ubuntu0.22.04.1) ...
+Setting up thunderbird (1:102.10.0+build2-0ubuntu0.22.04.1) ...
+Setting up xserver-common (2:21.1.4-2ubuntu1.7~22.04.1) ...
+Setting up xserver-xorg-legacy (2:21.1.4-2ubuntu1.7~22.04.1) ...
+setting xserver-xorg-legacy/xwrapper/allowed_users from configuration file
+Setting up xserver-xorg-core (2:21.1.4-2ubuntu1.7~22.04.1) ...
+Setting up ghostscript-x (9.55.0~dfsg1-0ubuntu5.2) ...
+Setting up thunderbird-locale-en (1:102.10.0+build2-0ubuntu0.22.04.1) ...
+Setting up apport (2.20.11-0ubuntu82.4) ...
+apport-autoreport.service is a disabled or a static unit, not starting it.
+Setting up python3-tz (2022.1-1ubuntu0.22.04.1) ...
+Setting up thunderbird-locale-en-us (1:102.10.0+build2-0ubuntu0.22.04.1) ...
+Setting up xserver-xephyr (2:21.1.4-2ubuntu1.7~22.04.1) ...
+Setting up thunderbird-gnome-support (1:102.10.0+build2-0ubuntu0.22.04.1) ...
+Setting up apport-gtk (2.20.11-0ubuntu82.4) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+/sbin/ldconfig.real: /lib/libospray_module_denoiser.so.2 is not a symbolic link
+
+/sbin/ldconfig.real: /lib/libopenvkl_module_cpu_device.so.1 is not a symbolic li
+nk
+
+/sbin/ldconfig.real: /lib/libospray_module_mpi.so.2 is not a symbolic link
+
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ baobab
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ docker pull ghcr.io/vuillaut/libmamba:main
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/images/create?fromImage=ghcr.io%2Fvuillaut%2Flibmamba&tag=main": dial unix /var/run/docker.sock: connect: permission denied
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ sudo docker pull ghcr.io/vuillaut/libmamba:main
+main: Pulling from vuillaut/libmamba
+d7bfe07ed847: Pull complete 
+307441931f9a: Pull complete 
+364af3b0c0d3: Pull complete 
+Digest: sha256:5e1bf93000d36a9a0d9247f5f770ca6a2252c7344ac92506e3de05e6a0f0b335
+Status: Downloaded newer image for ghcr.io/vuillaut/libmamba:main
+ghcr.io/vuillaut/libmamba:main
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ ls
+aiserver.py                   fileops.py                remote-play.bat
+breakmodel.py                 gensettings.py            requirements_mtj.txt
+bridge.lua                    install_requirements.bat  requirements.txt
+colab                         install_requirements.sh   static
+colabkobold.sh                Jupyter.bat               stories
+commandline.bat               koboldaiblue.ico          structures.py
+commandline-rocm.sh           koboldaigreen.ico         templates
+commandline.sh                koboldai.ico              test_aiserver.py
+cores                         LICENSE.md                torch_lazy_loader.py
+customsettings_template.json  logger.py                 tpu_mtj_backend.py
+disconnect-kobold-drive.bat   maps                      umamba.exe
+docker-cuda                   models                    Uninstall.bat
+docker-cuda.sh                play.bat                  update-koboldai.bat
+docker-rocm                   play-rocm.sh              userscripts
+docker-rocm.sh                play.sh                   utils.py
+docker-standalone             prompt_tuner.py           warpers.py
+environments                  pytest.ini
+extern                        README.md
+ian@ian-HP-Convertible-x360-11-ab1XX:~/KoboldAI-Client$ ./play.sh
+bin/micromamba
+
+                                           __
+          __  ______ ___  ____ _____ ___  / /_  ____ _
+         / / / / __ `__ \/ __ `/ __ `__ \/ __ \/ __ `/
+        / /_/ / / / / / / /_/ / / / / / / /_/ / /_/ /
+       / .___/_/ /_/ /_/\__,_/_/ /_/ /_/_.___/\__,_/
+      /_/
+
+pytorch/noarch                                      10.0kB @  43.4kB/s  0.2s
+pytorch/linux-64                                   162.6kB @ 591.2kB/s  0.3s
+pkgs/r/noarch                                        1.3MB @   2.0MB/s  0.4s
+pkgs/main/noarch                                   822.0kB @   1.1MB/s  0.5s
+pkgs/r/linux-64                                    @   1.3MB/s  0.4s
+pkgs/main/linux-64                                 @   4.6MB/s  1.5s
+conda-forge/noarch                                 @   3.2MB/s  4.2s
+conda-forge/linux-64                               @   5.1MB/s  7.4s
+
+Transaction
+
+  Prefix: runtime/envs/koboldai
+
+  Updating specs:
+
+   - colorama
+   - flask-socketio=5.3.2
+   - flask-session=0.4.0
+   - python-socketio=5.7.2
+   - pytorch=1.11
+   - python=3.8
+   - cudatoolkit=11.1
+   - eventlet=0.33.3
+   - dnspython=2.2.1
+   - markdown
+   - bleach=4.1.0
+   - pip
+   - git=2.35.1
+   - sentencepiece
+   - protobuf
+   - marshmallow[version='>=3.13']
+   - apispec-webframeworks
+   - loguru
+   - termcolor
+   - psutil
+
+
+  Package                       Version  Build                        Channel                   Size
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  + _libgcc_mutex                   0.1  conda_forge                  conda-forge/linux-64       3kB
+  + _openmp_mutex                   4.5  2_gnu                        conda-forge/linux-64      24kB
+  + apispec                       5.2.2  pyhd8ed1ab_0                 conda-forge/noarch        27kB
+  + apispec-webframeworks         0.5.2  pyhd8ed1ab_4                 conda-forge/noarch        13kB
+  + bidict                       0.22.1  pyhd8ed1ab_0                 conda-forge/noarch        33kB
+  + blas                           2.16  mkl                          conda-forge/linux-64      11kB
+  + bleach                        4.1.0  pyhd8ed1ab_0                 conda-forge/noarch       124kB
+  + bzip2                         1.0.8  h7f98852_4                   conda-forge/linux-64     496kB
+  + c-ares                       1.18.1  h7f98852_0                   conda-forge/linux-64     115kB
+  + ca-certificates           2022.12.7  ha878542_0                   conda-forge/linux-64     146kB
+  + cachelib                     0.10.2  pyhd8ed1ab_0                 conda-forge/noarch        20kB
+  + cffi                         1.15.1  py38h4a40e3a_3               conda-forge/linux-64     235kB
+  + click                         8.1.3  unix_pyhd8ed1ab_2            conda-forge/noarch        76kB
+  + colorama                      0.4.6  pyhd8ed1ab_0                 conda-forge/noarch        25kB
+  + cryptography                 40.0.2  py38h3d167d9_0               conda-forge/linux-64       2MB
+  + cudatoolkit                  11.1.1  ha002fc5_11                  conda-forge/linux-64     873MB
+  + curl                          8.0.1  h588be90_0                   conda-forge/linux-64      90kB
+  + dnspython                     2.2.1  pyhd8ed1ab_0                 conda-forge/noarch       139kB
+  + eventlet                     0.33.3  pyhd8ed1ab_0                 conda-forge/noarch       173kB
+  + expat                         2.5.0  hcb278e6_1                   conda-forge/linux-64     137kB
+  + flask                         2.2.3  pyhd8ed1ab_0                 conda-forge/noarch        83kB
+  + flask-session                 0.4.0  pyhd8ed1ab_0                 conda-forge/noarch        11kB
+  + flask-socketio                5.3.2  pyhd8ed1ab_0                 conda-forge/noarch        21kB
+  + gettext                      0.21.1  h27087fc_0                   conda-forge/linux-64       4MB
+  + git                          2.35.1  pl5321h04cb727_0             conda-forge/linux-64      14MB
+  + greenlet                      2.0.2  py38h8dc9893_0               conda-forge/linux-64     190kB
+  + idna                            3.4  pyhd8ed1ab_0                 conda-forge/noarch        57kB
+  + importlib-metadata            6.4.1  pyha770c72_0                 conda-forge/noarch        25kB
+  + intel-openmp               2023.0.0  h9e868ea_25371               pkgs/main/linux-64        16MB
+  + itsdangerous                  2.1.2  pyhd8ed1ab_0                 conda-forge/noarch        16kB
+  + jinja2                        3.1.2  pyhd8ed1ab_1                 conda-forge/noarch       101kB
+  + keyutils                      1.6.1  h166bdaf_0                   conda-forge/linux-64     118kB
+  + krb5                         1.20.1  h81ceb04_0                   conda-forge/linux-64       1MB
+  + ld_impl_linux-64               2.40  h41732ed_0                   conda-forge/linux-64     705kB
+  + libabseil                20230125.0  cxx17_hcb278e6_1             conda-forge/linux-64       1MB
+  + libblas                       3.8.0  16_mkl                       conda-forge/linux-64      11kB
+  + libcblas                      3.8.0  16_mkl                       conda-forge/linux-64      11kB
+  + libcurl                       8.0.1  h588be90_0                   conda-forge/linux-64     361kB
+  + libedit                3.1.20191231  he28a2e2_2                   conda-forge/linux-64     124kB
+  + libev                          4.33  h516909a_1                   conda-forge/linux-64     106kB
+  + libexpat                      2.5.0  hcb278e6_1                   conda-forge/linux-64      78kB
+  + libffi                        3.4.2  h7f98852_5                   conda-forge/linux-64      58kB
+  + libgcc-ng                    12.2.0  h65d4601_19                  conda-forge/linux-64     954kB
+  + libgfortran-ng                7.5.0  h14aa051_20                  conda-forge/linux-64      23kB
+  + libgfortran4                  7.5.0  h14aa051_20                  conda-forge/linux-64       1MB
+  + libgomp                      12.2.0  h65d4601_19                  conda-forge/linux-64     466kB
+  + libiconv                       1.17  h166bdaf_0                   conda-forge/linux-64       1MB
+  + liblapack                     3.8.0  16_mkl                       conda-forge/linux-64      11kB
+  + liblapacke                    3.8.0  16_mkl                       conda-forge/linux-64      11kB
+  + libnghttp2                   1.52.0  h61bc06f_0                   conda-forge/linux-64     622kB
+  + libnsl                        2.0.0  h7f98852_0                   conda-forge/linux-64      31kB
+  + libprotobuf                 3.21.12  h3eb15da_0                   conda-forge/linux-64       2MB
+  + libsentencepiece             0.1.97  h47aad16_1                   conda-forge/linux-64     823kB
+  + libsqlite                    3.40.0  h753d276_0                   conda-forge/linux-64     810kB
+  + libssh2                      1.10.0  hf14f497_3                   conda-forge/linux-64     239kB
+  + libstdcxx-ng                 12.2.0  h46fd767_19                  conda-forge/linux-64       4MB
+  + libuuid                      2.38.1  h0b41bf4_0                   conda-forge/linux-64      34kB
+  + libuv                        1.44.2  h166bdaf_0                   conda-forge/linux-64       1MB
+  + libzlib                      1.2.13  h166bdaf_4                   conda-forge/linux-64      66kB
+  + loguru                        0.7.0  py38h578d9bd_0               conda-forge/linux-64      94kB
+  + markdown                      3.4.3  pyhd8ed1ab_0                 conda-forge/noarch        71kB
+  + markupsafe                    2.1.2  py38h1de0b5d_0               conda-forge/linux-64      23kB
+  + marshmallow                  3.19.0  pyhd8ed1ab_0                 conda-forge/noarch        85kB
+  + mkl                          2020.2  256                          pkgs/main/linux-64       145MB
+  + ncurses                         6.3  h27087fc_1                   conda-forge/linux-64       1MB
+  + openssl                       3.1.0  h0b41bf4_0                   conda-forge/linux-64       3MB
+  + packaging                      23.1  pyhd8ed1ab_0                 conda-forge/noarch        46kB
+  + pcre2                         10.37  hc3806b6_1                   conda-forge/linux-64       1MB
+  + perl                         5.32.1  2_h7f98852_perl5             conda-forge/linux-64      15MB
+  + pip                            23.1  pyhd8ed1ab_0                 conda-forge/noarch         1MB
+  + protobuf                    4.21.12  py38h8dc9893_0               conda-forge/linux-64     323kB
+  + psutil                        5.9.4  py38h0a891b7_0               conda-forge/linux-64     357kB
+  + pycparser                      2.21  pyhd8ed1ab_0                 conda-forge/noarch       103kB
+  + pyopenssl                    23.1.1  pyhd8ed1ab_0                 conda-forge/noarch       128kB
+  + python                       3.8.16  he550d4f_1_cpython           conda-forge/linux-64      23MB
+  + python-engineio               4.4.0  pyhd8ed1ab_0                 conda-forge/noarch        37kB
+  + python-socketio               5.7.2  pyhd8ed1ab_0                 conda-forge/noarch        36kB
+  + python_abi                      3.8  3_cp38                       conda-forge/linux-64       6kB
+  + pytorch                      1.11.0  py3.8_cuda11.1_cudnn8.0.5_0  pytorch/linux-64           1GB
+  + pytorch-mutex                   1.0  cuda                         pytorch/noarch             3kB
+  + pyyaml                          6.0  py38h0a891b7_5               conda-forge/linux-64     187kB
+  + readline                        8.2  h8228510_1                   conda-forge/linux-64     281kB
+  + sentencepiece                0.1.97  h578d9bd_1                   conda-forge/linux-64      31kB
+  + sentencepiece-python         0.1.97  py38h0c9c4f8_1               conda-forge/linux-64       2MB
+  + sentencepiece-spm            0.1.97  h47aad16_1                   conda-forge/linux-64      85kB
+  + setuptools                   67.6.1  pyhd8ed1ab_0                 conda-forge/noarch       580kB
+  + six                          1.16.0  pyh6c4a22f_0                 conda-forge/noarch        14kB
+  + termcolor                     2.2.0  pyhd8ed1ab_0                 conda-forge/noarch        11kB
+  + tk                           8.6.12  h27826a3_0                   conda-forge/linux-64       3MB
+  + typing_extensions             4.5.0  pyha770c72_0                 conda-forge/noarch        31kB
+  + webencodings                  0.5.1  py_1                         conda-forge/noarch        12kB
+  + werkzeug                      2.2.3  pyhd8ed1ab_0                 conda-forge/noarch       253kB
+  + wheel                        0.40.0  pyhd8ed1ab_0                 conda-forge/noarch        56kB
+  + xz                            5.2.6  h166bdaf_0                   conda-forge/linux-64     418kB
+  + yaml                          0.2.5  h7f98852_2                   conda-forge/linux-64      89kB
+  + zipp                         3.15.0  pyhd8ed1ab_0                 conda-forge/noarch        17kB
+  + zlib                         1.2.13  h166bdaf_4                   conda-forge/linux-64      94kB
+  + zstd                          1.5.2  h3eb15da_6                   conda-forge/linux-64     420kB
+
+  Summary:
+
+  Install: 98 packages
+
+  Total download: 3GB
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+Transaction starting
+pytorch-mutex                                        2.9kB @  16.6kB/s  0.2s
+_libgcc_mutex                                        2.6kB @  14.7kB/s  0.2s
+python_abi                                           5.7kB @  29.2kB/s  0.2s
+libexpat                                            78.0kB @ 295.6kB/s  0.1s
+ld_impl_linux-64                                   704.7kB @   2.0MB/s  0.4s
+libnsl                                              31.2kB @  74.4kB/s  0.1s
+xz                                                 418.4kB @ 839.5kB/s  0.2s
+libgcc-ng                                          953.8kB @   1.8MB/s  0.3s
+libzlib                                             65.5kB @ 112.7kB/s  0.1s
+readline                                           281.5kB @ 432.4kB/s  0.1s
+libssh2                                            239.4kB @ 317.5kB/s  0.2s
+libuv                                                1.1MB @   1.4MB/s  0.6s
+libabseil                                            1.2MB @   1.6MB/s  0.4s
+libstdcxx-ng                                         4.5MB @   4.9MB/s  0.9s
+libcurl                                            360.8kB @ 380.2kB/s  0.2s
+libsqlite                                          810.5kB @ 815.1kB/s  0.2s
+idna                                                56.7kB @  53.9kB/s  0.1s
+python-engineio                                     36.5kB @  32.8kB/s  0.1s
+itsdangerous                                        16.4kB @  14.2kB/s  0.0s
+termcolor                                           11.3kB @   9.5kB/s  0.0s
+pip                                                  1.4MB @   1.1MB/s  0.2s
+python-socketio                                     35.8kB @  28.9kB/s  0.1s
+markdown                                            70.9kB @  57.1kB/s  0.0s
+markupsafe                                          23.4kB @  18.4kB/s  0.0s
+loguru                                              93.5kB @  72.5kB/s  0.0s
+cffi                                               235.3kB @ 174.8kB/s  0.1s
+sentencepiece                                       30.7kB @  22.8kB/s  0.1s
+blas                                                11.1kB @   8.0kB/s  0.0s
+apispec                                             26.9kB @  19.4kB/s  0.0s
+tk                                                   3.5MB @   2.4MB/s  0.8s
+apispec-webframeworks                               12.8kB @   9.0kB/s  0.0s
+flask                                               83.4kB @  57.8kB/s  0.1s
+libgfortran-ng                                      23.4kB @  16.0kB/s  0.0s
+ca-certificates                                    146.0kB @  98.7kB/s  0.1s
+c-ares                                             115.4kB @  76.7kB/s  0.1s
+keyutils                                           117.8kB @  78.2kB/s  0.0s
+libuuid                                             33.6kB @  22.1kB/s  0.0s
+libedit                                            123.9kB @  77.8kB/s  0.1s
+zlib                                                94.1kB @  56.2kB/s  0.1s
+sentencepiece-spm                                   84.5kB @  48.2kB/s  0.1s
+pcre2                                                1.1MB @ 627.4kB/s  0.3s
+typing_extensions                                   31.3kB @  16.8kB/s  0.0s
+cachelib                                            20.1kB @  10.4kB/s  0.1s
+openssl                                              2.6MB @   1.3MB/s  0.5s
+click                                               76.0kB @  37.2kB/s  0.1s
+colorama                                            25.2kB @  11.9kB/s  0.1s
+marshmallow                                         84.7kB @  39.8kB/s  0.1s
+protobuf                                           323.1kB @ 144.3kB/s  0.1s
+psutil                                             356.7kB @ 158.3kB/s  0.1s
+liblapacke                                          11.0kB @   4.7kB/s  0.1s
+pyopenssl                                          128.1kB @  54.8kB/s  0.1s
+flask-socketio                                      21.2kB @   8.9kB/s  0.0s
+flask-session                                       11.3kB @   4.7kB/s  0.1s
+libev                                              106.2kB @  43.2kB/s  0.1s
+yaml                                                89.1kB @  36.2kB/s  0.1s
+bzip2                                              495.7kB @ 184.9kB/s  0.2s
+libprotobuf                                          2.2MB @ 643.7kB/s  0.8s
+curl                                                89.9kB @  25.8kB/s  0.1s
+setuptools                                         580.3kB @ 159.5kB/s  0.2s
+packaging                                           46.1kB @  12.5kB/s  0.0s
+zipp                                                17.2kB @   4.6kB/s  0.0s
+libblas                                             11.2kB @   2.8kB/s  0.3s
+sentencepiece-python                                 2.4MB @ 563.1kB/s  0.4s
+cryptography                                         1.5MB @ 332.2kB/s  0.2s
+dnspython                                          138.8kB @  26.4kB/s  0.7s
+libgfortran4                                         1.3MB @ 236.4kB/s  0.3s
+libiconv                                             1.5MB @ 247.1kB/s  0.3s
+libffi                                              58.3kB @   9.7kB/s  0.2s
+zstd                                               419.6kB @  68.0kB/s  0.2s
+libsentencepiece                                   823.1kB @ 128.7kB/s  0.2s
+python                                              22.8MB @   3.5MB/s  5.8s
+pycparser                                          102.7kB @  15.6kB/s  0.2s
+six                                                 14.3kB @   2.2kB/s  0.0s
+libcblas                                            10.9kB @   1.6kB/s  0.0s
+eventlet                                           173.5kB @  25.8kB/s  0.1s
+_openmp_mutex                                       23.6kB @   3.5kB/s  0.0s
+expat                                              136.8kB @  20.0kB/s  0.1s
+bleach                                             124.1kB @  17.3kB/s  0.6s
+krb5                                                 1.3MB @ 185.4kB/s  0.3s
+intel-openmp                                        15.8MB @   2.2MB/s  5.6s
+webencodings                                        11.9kB @   1.6kB/s  0.1s
+pyyaml                                             187.4kB @  25.7kB/s  0.1s
+jinja2                                             101.4kB @  13.8kB/s  0.1s
+werkzeug                                           252.6kB @  34.2kB/s  0.1s
+wheel                                               55.7kB @   7.5kB/s  0.1s
+greenlet                                           190.0kB @  25.5kB/s  0.1s
+gettext                                              4.3MB @ 498.2kB/s  1.2s
+liblapack                                           10.9kB @   1.3kB/s  0.1s
+git                                                 14.0MB @   1.3MB/s  3.1s
+importlib-metadata                                  25.4kB @   2.3kB/s  0.3s
+libnghttp2                                         622.4kB @  56.2kB/s  0.2s
+ncurses                                              1.0MB @  90.4kB/s  0.3s
+bidict                                              32.6kB @   2.9kB/s  0.1s
+libgomp                                            466.2kB @  40.2kB/s  0.2s
+perl                                                15.1MB @   1.2MB/s  4.2s
+mkl                                                145.1MB @   4.3MB/s 32.8s
+cudatoolkit                                        873.2MB @   7.9MB/s 1m:48.4s
+pytorch                                              1.4GB @   9.0MB/s 2m:29.0s
+Linking pytorch-mutex-1.0-cuda
+Linking _libgcc_mutex-0.1-conda_forge
+Linking libstdcxx-ng-12.2.0-h46fd767_19
+Linking python_abi-3.8-3_cp38
+Linking ld_impl_linux-64-2.40-h41732ed_0
+Linking ca-certificates-2022.12.7-ha878542_0
+Linking libgfortran4-7.5.0-h14aa051_20
+Linking libgomp-12.2.0-h65d4601_19
+Linking libgfortran-ng-7.5.0-h14aa051_20
+Linking _openmp_mutex-4.5-2_gnu
+Linking libgcc-ng-12.2.0-h65d4601_19
+Linking libuv-1.44.2-h166bdaf_0
+Linking libev-4.33-h516909a_1
+Linking c-ares-1.18.1-h7f98852_0
+Linking libiconv-1.17-h166bdaf_0
+Linking gettext-0.21.1-h27087fc_0
+Linking libexpat-2.5.0-hcb278e6_1
+Linking keyutils-1.6.1-h166bdaf_0
+Linking yaml-0.2.5-h7f98852_2
+Linking xz-5.2.6-h166bdaf_0
+Linking ncurses-6.3-h27087fc_1
+Linking libuuid-2.38.1-h0b41bf4_0
+Linking libnsl-2.0.0-h7f98852_0
+Linking libffi-3.4.2-h7f98852_5
+Linking bzip2-1.0.8-h7f98852_4
+Linking libabseil-20230125.0-cxx17_hcb278e6_1
+Linking openssl-3.1.0-h0b41bf4_0
+Linking cudatoolkit-11.1.1-ha002fc5_11
+critical libmamba Cannot activate, prefix does not exist at: runtime/envs/koboldai
+/tmp/mambafLpLi1OzkSU: line 5: runtime/envs/koboldai/bin/.cudatoolkit-post-link.sh: No such file or directory
+
+Linking libzlib-1.2.13-h166bdaf_4
+Linking expat-2.5.0-hcb278e6_1
+Linking libedit-3.1.20191231-he28a2e2_2
+Linking readline-8.2-h8228510_1
+Linking perl-5.32.1-2_h7f98852_perl5
+Linking zstd-1.5.2-h3eb15da_6
+Linking libssh2-1.10.0-hf14f497_3
+Linking pcre2-10.37-hc3806b6_1
+Linking libnghttp2-1.52.0-h61bc06f_0
+Linking tk-8.6.12-h27826a3_0
+Linking libprotobuf-3.21.12-h3eb15da_0
+Linking zlib-1.2.13-h166bdaf_4
+Linking libsqlite-3.40.0-h753d276_0
+Linking krb5-1.20.1-h81ceb04_0
+Linking libsentencepiece-0.1.97-h47aad16_1
+Linking python-3.8.16-he550d4f_1_cpython
+Linking libcurl-8.0.1-h588be90_0
+Linking sentencepiece-spm-0.1.97-h47aad16_1
+Linking curl-8.0.1-h588be90_0
+Linking git-2.35.1-pl5321h04cb727_0
+Linking intel-openmp-2023.0.0-h9e868ea_25371
+Linking mkl-2020.2-256
+Linking wheel-0.40.0-pyhd8ed1ab_0
+Linking setuptools-67.6.1-pyhd8ed1ab_0
+Linking pip-23.1-pyhd8ed1ab_0
+Linking typing_extensions-4.5.0-pyha770c72_0
+Linking pycparser-2.21-pyhd8ed1ab_0
+Linking webencodings-0.5.1-py_1
+Linking idna-3.4-pyhd8ed1ab_0
+Linking cachelib-0.10.2-pyhd8ed1ab_0
+Linking packaging-23.1-pyhd8ed1ab_0
+Linking python-engineio-4.4.0-pyhd8ed1ab_0
+Linking bidict-0.22.1-pyhd8ed1ab_0
+Linking six-1.16.0-pyh6c4a22f_0
+Linking itsdangerous-2.1.2-pyhd8ed1ab_0
+Linking click-8.1.3-unix_pyhd8ed1ab_2
+Linking zipp-3.15.0-pyhd8ed1ab_0
+Linking termcolor-2.2.0-pyhd8ed1ab_0
+Linking colorama-0.4.6-pyhd8ed1ab_0
+Linking marshmallow-3.19.0-pyhd8ed1ab_0
+Linking python-socketio-5.7.2-pyhd8ed1ab_0
+Linking bleach-4.1.0-pyhd8ed1ab_0
+Linking importlib-metadata-6.4.1-pyha770c72_0
+Linking markdown-3.4.3-pyhd8ed1ab_0
+Linking libblas-3.8.0-16_mkl
+Linking pyyaml-6.0-py38h0a891b7_5
+Linking markupsafe-2.1.2-py38h1de0b5d_0
+Linking greenlet-2.0.2-py38h8dc9893_0
+Linking psutil-5.9.4-py38h0a891b7_0
+Linking loguru-0.7.0-py38h578d9bd_0
+Linking protobuf-4.21.12-py38h8dc9893_0
+Linking sentencepiece-python-0.1.97-py38h0c9c4f8_1
+Linking cffi-1.15.1-py38h4a40e3a_3
+Linking liblapack-3.8.0-16_mkl
+Linking libcblas-3.8.0-16_mkl
+Linking sentencepiece-0.1.97-h578d9bd_1
+Linking cryptography-40.0.2-py38h3d167d9_0
+Linking liblapacke-3.8.0-16_mkl
+Linking blas-2.16-mkl
+Linking apispec-5.2.2-pyhd8ed1ab_0
+Linking werkzeug-2.2.3-pyhd8ed1ab_0
+Linking jinja2-3.1.2-pyhd8ed1ab_1
+Linking pyopenssl-23.1.1-pyhd8ed1ab_0
+Linking dnspython-2.2.1-pyhd8ed1ab_0
+Linking apispec-webframeworks-0.5.2-pyhd8ed1ab_4
+Linking flask-2.2.3-pyhd8ed1ab_0
+Linking eventlet-0.33.3-pyhd8ed1ab_0
+Linking flask-session-0.4.0-pyhd8ed1ab_0
+Linking flask-socketio-5.3.2-pyhd8ed1ab_0
+Linking pytorch-1.11.0-py3.8_cuda11.1_cudnn8.0.5_0
+
+Transaction finished
+
+To activate this environment, use:
+
+    $ [micro]mamba activate <environment>
+
+Or to execute a single command in this environment, use:
+
+    $ [micro]mamba run -n <environment> mycommand
+
+
+Installing pip packages: flask-cloudflared==0.0.10, flask-ngrok, lupa==1.10, transformers==4.24.0, huggingface_hub==0.12.1, safetensors, accelerate, git+https://github.com/VE-FORBRYDERNE/mkultra
+critical libmamba Cannot activate, prefix does not exist at: runtime/envs/koboldai
+/tmp/mambafEAxZyS25jP: line 5: runtime/envs/koboldai/bin/python: No such file or directory
+critical libmamba pip failed to install packages
+
+                                           __
+          __  ______ ___  ____ _____ ___  / /_  ____ _
+         / / / / __ `__ \/ __ `/ __ `__ \/ __ \/ __ `/
+        / /_/ / / / / / / /_/ / / / / / / /_/ / /_/ /
+       / .___/_/ /_/ /_/\__,_/_/ /_/ /_/_.___/\__,_/
+      /_/
+
+pytorch/linux-64                                            Using cache
+pytorch/noarch                                              Using cache
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+pkgs/main/linux-64                                            No change
+pkgs/main/noarch                                              No change
+pkgs/r/linux-64                                               No change
+pkgs/r/noarch                                                 No change
+
+Transaction
+
+  Prefix: /home/ian/KoboldAI-Client/runtime/envs/koboldai
+
+  Updating specs:
+
+   - colorama
+   - flask-socketio=5.3.2
+   - flask-session=0.4.0
+   - python-socketio=5.7.2
+   - pytorch=1.11
+   - python=3.8
+   - cudatoolkit=11.1
+   - eventlet=0.33.3
+   - dnspython=2.2.1
+   - markdown
+   - bleach=4.1.0
+   - pip
+   - git=2.35.1
+   - sentencepiece
+   - protobuf
+   - marshmallow[version='>=3.13']
+   - apispec-webframeworks
+   - loguru
+   - termcolor
+   - psutil
+
+
+  Package                       Version  Build                        Channel                    Size
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  + _libgcc_mutex                   0.1  conda_forge                  conda-forge/linux-64     Cached
+  + _openmp_mutex                   4.5  2_gnu                        conda-forge/linux-64     Cached
+  + apispec                       5.2.2  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + apispec-webframeworks         0.5.2  pyhd8ed1ab_4                 conda-forge/noarch       Cached
+  + bidict                       0.22.1  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + blas                           2.16  mkl                          conda-forge/linux-64     Cached
+  + bleach                        4.1.0  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + bzip2                         1.0.8  h7f98852_4                   conda-forge/linux-64     Cached
+  + c-ares                       1.18.1  h7f98852_0                   conda-forge/linux-64     Cached
+  + ca-certificates           2022.12.7  ha878542_0                   conda-forge/linux-64     Cached
+  + cachelib                     0.10.2  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + cffi                         1.15.1  py38h4a40e3a_3               conda-forge/linux-64     Cached
+  + click                         8.1.3  unix_pyhd8ed1ab_2            conda-forge/noarch       Cached
+  + colorama                      0.4.6  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + cryptography                 40.0.2  py38h3d167d9_0               conda-forge/linux-64     Cached
+  + cudatoolkit                  11.1.1  ha002fc5_11                  conda-forge/linux-64     Cached
+  + curl                          8.0.1  h588be90_0                   conda-forge/linux-64     Cached
+  + dnspython                     2.2.1  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + eventlet                     0.33.3  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + expat                         2.5.0  hcb278e6_1                   conda-forge/linux-64     Cached
+  + flask                         2.2.3  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + flask-session                 0.4.0  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + flask-socketio                5.3.2  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + gettext                      0.21.1  h27087fc_0                   conda-forge/linux-64     Cached
+  + git                          2.35.1  pl5321h04cb727_0             conda-forge/linux-64     Cached
+  + greenlet                      2.0.2  py38h8dc9893_0               conda-forge/linux-64     Cached
+  + idna                            3.4  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + importlib-metadata            6.4.1  pyha770c72_0                 conda-forge/noarch       Cached
+  + intel-openmp               2023.0.0  h9e868ea_25371               pkgs/main/linux-64       Cached
+  + itsdangerous                  2.1.2  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + jinja2                        3.1.2  pyhd8ed1ab_1                 conda-forge/noarch       Cached
+  + keyutils                      1.6.1  h166bdaf_0                   conda-forge/linux-64     Cached
+  + krb5                         1.20.1  h81ceb04_0                   conda-forge/linux-64     Cached
+  + ld_impl_linux-64               2.40  h41732ed_0                   conda-forge/linux-64     Cached
+  + libabseil                20230125.0  cxx17_hcb278e6_1             conda-forge/linux-64     Cached
+  + libblas                       3.8.0  16_mkl                       conda-forge/linux-64     Cached
+  + libcblas                      3.8.0  16_mkl                       conda-forge/linux-64     Cached
+  + libcurl                       8.0.1  h588be90_0                   conda-forge/linux-64     Cached
+  + libedit                3.1.20191231  he28a2e2_2                   conda-forge/linux-64     Cached
+  + libev                          4.33  h516909a_1                   conda-forge/linux-64     Cached
+  + libexpat                      2.5.0  hcb278e6_1                   conda-forge/linux-64     Cached
+  + libffi                        3.4.2  h7f98852_5                   conda-forge/linux-64     Cached
+  + libgcc-ng                    12.2.0  h65d4601_19                  conda-forge/linux-64     Cached
+  + libgfortran-ng                7.5.0  h14aa051_20                  conda-forge/linux-64     Cached
+  + libgfortran4                  7.5.0  h14aa051_20                  conda-forge/linux-64     Cached
+  + libgomp                      12.2.0  h65d4601_19                  conda-forge/linux-64     Cached
+  + libiconv                       1.17  h166bdaf_0                   conda-forge/linux-64     Cached
+  + liblapack                     3.8.0  16_mkl                       conda-forge/linux-64     Cached
+  + liblapacke                    3.8.0  16_mkl                       conda-forge/linux-64     Cached
+  + libnghttp2                   1.52.0  h61bc06f_0                   conda-forge/linux-64     Cached
+  + libnsl                        2.0.0  h7f98852_0                   conda-forge/linux-64     Cached
+  + libprotobuf                 3.21.12  h3eb15da_0                   conda-forge/linux-64     Cached
+  + libsentencepiece             0.1.97  h47aad16_1                   conda-forge/linux-64     Cached
+  + libsqlite                    3.40.0  h753d276_0                   conda-forge/linux-64     Cached
+  + libssh2                      1.10.0  hf14f497_3                   conda-forge/linux-64     Cached
+  + libstdcxx-ng                 12.2.0  h46fd767_19                  conda-forge/linux-64     Cached
+  + libuuid                      2.38.1  h0b41bf4_0                   conda-forge/linux-64     Cached
+  + libuv                        1.44.2  h166bdaf_0                   conda-forge/linux-64     Cached
+  + libzlib                      1.2.13  h166bdaf_4                   conda-forge/linux-64     Cached
+  + loguru                        0.7.0  py38h578d9bd_0               conda-forge/linux-64     Cached
+  + markdown                      3.4.3  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + markupsafe                    2.1.2  py38h1de0b5d_0               conda-forge/linux-64     Cached
+  + marshmallow                  3.19.0  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + mkl                          2020.2  256                          pkgs/main/linux-64       Cached
+  + ncurses                         6.3  h27087fc_1                   conda-forge/linux-64     Cached
+  + openssl                       3.1.0  h0b41bf4_0                   conda-forge/linux-64     Cached
+  + packaging                      23.1  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + pcre2                         10.37  hc3806b6_1                   conda-forge/linux-64     Cached
+  + perl                         5.32.1  2_h7f98852_perl5             conda-forge/linux-64     Cached
+  + pip                            23.1  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + protobuf                    4.21.12  py38h8dc9893_0               conda-forge/linux-64     Cached
+  + psutil                        5.9.4  py38h0a891b7_0               conda-forge/linux-64     Cached
+  + pycparser                      2.21  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + pyopenssl                    23.1.1  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + python                       3.8.16  he550d4f_1_cpython           conda-forge/linux-64     Cached
+  + python-engineio               4.4.0  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + python-socketio               5.7.2  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + python_abi                      3.8  3_cp38                       conda-forge/linux-64     Cached
+  + pytorch                      1.11.0  py3.8_cuda11.1_cudnn8.0.5_0  pytorch/linux-64         Cached
+  + pytorch-mutex                   1.0  cuda                         pytorch/noarch           Cached
+  + pyyaml                          6.0  py38h0a891b7_5               conda-forge/linux-64     Cached
+  + readline                        8.2  h8228510_1                   conda-forge/linux-64     Cached
+  + sentencepiece                0.1.97  h578d9bd_1                   conda-forge/linux-64     Cached
+  + sentencepiece-python         0.1.97  py38h0c9c4f8_1               conda-forge/linux-64     Cached
+  + sentencepiece-spm            0.1.97  h47aad16_1                   conda-forge/linux-64     Cached
+  + setuptools                   67.6.1  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + six                          1.16.0  pyh6c4a22f_0                 conda-forge/noarch       Cached
+  + termcolor                     2.2.0  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + tk                           8.6.12  h27826a3_0                   conda-forge/linux-64     Cached
+  + typing_extensions             4.5.0  pyha770c72_0                 conda-forge/noarch       Cached
+  + webencodings                  0.5.1  py_1                         conda-forge/noarch       Cached
+  + werkzeug                      2.2.3  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + wheel                        0.40.0  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + xz                            5.2.6  h166bdaf_0                   conda-forge/linux-64     Cached
+  + yaml                          0.2.5  h7f98852_2                   conda-forge/linux-64     Cached
+  + zipp                         3.15.0  pyhd8ed1ab_0                 conda-forge/noarch       Cached
+  + zlib                         1.2.13  h166bdaf_4                   conda-forge/linux-64     Cached
+  + zstd                          1.5.2  h3eb15da_6                   conda-forge/linux-64     Cached
+
+  Summary:
+
+  Install: 98 packages
+
+  Total download: 0 B
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+Transaction starting
+Linking pytorch-mutex-1.0-cuda
+Linking _libgcc_mutex-0.1-conda_forge
+Linking libstdcxx-ng-12.2.0-h46fd767_19
+Linking python_abi-3.8-3_cp38
+Linking ld_impl_linux-64-2.40-h41732ed_0
+Linking ca-certificates-2022.12.7-ha878542_0
+Linking libgfortran4-7.5.0-h14aa051_20
+Linking libgomp-12.2.0-h65d4601_19
+Linking libgfortran-ng-7.5.0-h14aa051_20
+Linking _openmp_mutex-4.5-2_gnu
+Linking libgcc-ng-12.2.0-h65d4601_19
+Linking libuv-1.44.2-h166bdaf_0
+Linking libev-4.33-h516909a_1
+Linking c-ares-1.18.1-h7f98852_0
+Linking libiconv-1.17-h166bdaf_0
+Linking gettext-0.21.1-h27087fc_0
+Linking libexpat-2.5.0-hcb278e6_1
+Linking keyutils-1.6.1-h166bdaf_0
+Linking yaml-0.2.5-h7f98852_2
+Linking xz-5.2.6-h166bdaf_0
+Linking ncurses-6.3-h27087fc_1
+Linking libuuid-2.38.1-h0b41bf4_0
+Linking libnsl-2.0.0-h7f98852_0
+Linking libffi-3.4.2-h7f98852_5
+Linking bzip2-1.0.8-h7f98852_4
+Linking libabseil-20230125.0-cxx17_hcb278e6_1
+Linking openssl-3.1.0-h0b41bf4_0
+Linking cudatoolkit-11.1.1-ha002fc5_11
+By downloading and using the CUDA Toolkit conda packages, you accept the terms and conditions of the CUDA End User License Agreement (EULA): https://docs.nvidia.com/cuda/eula/index.html
+
+Linking libzlib-1.2.13-h166bdaf_4
+Linking expat-2.5.0-hcb278e6_1
+Linking libedit-3.1.20191231-he28a2e2_2
+Linking readline-8.2-h8228510_1
+Linking perl-5.32.1-2_h7f98852_perl5
+Linking zstd-1.5.2-h3eb15da_6
+Linking libssh2-1.10.0-hf14f497_3
+Linking pcre2-10.37-hc3806b6_1
+Linking libnghttp2-1.52.0-h61bc06f_0
+Linking tk-8.6.12-h27826a3_0
+Linking libprotobuf-3.21.12-h3eb15da_0
+Linking zlib-1.2.13-h166bdaf_4
+Linking libsqlite-3.40.0-h753d276_0
+Linking krb5-1.20.1-h81ceb04_0
+Linking libsentencepiece-0.1.97-h47aad16_1
+Linking python-3.8.16-he550d4f_1_cpython
+Linking libcurl-8.0.1-h588be90_0
+Linking sentencepiece-spm-0.1.97-h47aad16_1
+Linking curl-8.0.1-h588be90_0
+Linking git-2.35.1-pl5321h04cb727_0
+Linking intel-openmp-2023.0.0-h9e868ea_25371
+Linking mkl-2020.2-256
+Linking wheel-0.40.0-pyhd8ed1ab_0
+Linking setuptools-67.6.1-pyhd8ed1ab_0
+Linking pip-23.1-pyhd8ed1ab_0
+Linking typing_extensions-4.5.0-pyha770c72_0
+Linking pycparser-2.21-pyhd8ed1ab_0
+Linking webencodings-0.5.1-py_1
+Linking idna-3.4-pyhd8ed1ab_0
+Linking cachelib-0.10.2-pyhd8ed1ab_0
+Linking packaging-23.1-pyhd8ed1ab_0
+Linking python-engineio-4.4.0-pyhd8ed1ab_0
+Linking bidict-0.22.1-pyhd8ed1ab_0
+Linking six-1.16.0-pyh6c4a22f_0
+Linking itsdangerous-2.1.2-pyhd8ed1ab_0
+Linking click-8.1.3-unix_pyhd8ed1ab_2
+Linking zipp-3.15.0-pyhd8ed1ab_0
+Linking termcolor-2.2.0-pyhd8ed1ab_0
+Linking colorama-0.4.6-pyhd8ed1ab_0
+Linking marshmallow-3.19.0-pyhd8ed1ab_0
+Linking python-socketio-5.7.2-pyhd8ed1ab_0
+Linking bleach-4.1.0-pyhd8ed1ab_0
+Linking importlib-metadata-6.4.1-pyha770c72_0
+Linking markdown-3.4.3-pyhd8ed1ab_0
+Linking libblas-3.8.0-16_mkl
+Linking pyyaml-6.0-py38h0a891b7_5
+Linking markupsafe-2.1.2-py38h1de0b5d_0
+Linking greenlet-2.0.2-py38h8dc9893_0
+Linking psutil-5.9.4-py38h0a891b7_0
+Linking loguru-0.7.0-py38h578d9bd_0
+Linking protobuf-4.21.12-py38h8dc9893_0
+Linking sentencepiece-python-0.1.97-py38h0c9c4f8_1
+Linking cffi-1.15.1-py38h4a40e3a_3
+Linking liblapack-3.8.0-16_mkl
+Linking libcblas-3.8.0-16_mkl
+Linking sentencepiece-0.1.97-h578d9bd_1
+Linking cryptography-40.0.2-py38h3d167d9_0
+Linking liblapacke-3.8.0-16_mkl
+Linking blas-2.16-mkl
+Linking apispec-5.2.2-pyhd8ed1ab_0
+Linking werkzeug-2.2.3-pyhd8ed1ab_0
+Linking jinja2-3.1.2-pyhd8ed1ab_1
+Linking pyopenssl-23.1.1-pyhd8ed1ab_0
+Linking dnspython-2.2.1-pyhd8ed1ab_0
+Linking apispec-webframeworks-0.5.2-pyhd8ed1ab_4
+Linking flask-2.2.3-pyhd8ed1ab_0
+Linking eventlet-0.33.3-pyhd8ed1ab_0
+Linking flask-session-0.4.0-pyhd8ed1ab_0
+Linking flask-socketio-5.3.2-pyhd8ed1ab_0
+Linking pytorch-1.11.0-py3.8_cuda11.1_cudnn8.0.5_0
+
+Transaction finished
+
+To activate this environment, use:
+
+    $ [micro]mamba activate <environment>
+
+Or to execute a single command in this environment, use:
+
+    $ [micro]mamba run -n <environment> mycommand
+
+
+Installing pip packages: flask-cloudflared==0.0.10, flask-ngrok, lupa==1.10, transformers==4.24.0, huggingface_hub==0.12.1, safetensors, accelerate, git+https://github.com/VE-FORBRYDERNE/mkultra
+Collecting git+https://github.com/VE-FORBRYDERNE/mkultra (from -r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 8))
+  Cloning https://github.com/VE-FORBRYDERNE/mkultra to /tmp/pip-req-build-xfalt47r
+  Running command git clone --filter=blob:none --quiet https://github.com/VE-FORBRYDERNE/mkultra /tmp/pip-req-build-xfalt47r
+  Resolved https://github.com/VE-FORBRYDERNE/mkultra to commit ef544de73ec6a1a4bd55e824d0628fa0ef1323ac
+  Preparing metadata (setup.py) ... done
+Collecting flask-cloudflared==0.0.10 (from -r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1))
+  Downloading flask_cloudflared-0.0.10-py3-none-any.whl (5.9 kB)
+Collecting flask-ngrok (from -r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 2))
+  Downloading flask_ngrok-0.0.25-py3-none-any.whl (3.1 kB)
+Collecting lupa==1.10 (from -r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 3))
+  Downloading lupa-1.10-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (304 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 304.6/304.6 kB 4.6 MB/s eta 0:00:00
+Collecting transformers==4.24.0 (from -r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 4))
+  Downloading transformers-4.24.0-py3-none-any.whl (5.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 16.1 MB/s eta 0:00:00
+Collecting huggingface_hub==0.12.1 (from -r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 5))
+  Downloading huggingface_hub-0.12.1-py3-none-any.whl (190 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 190.3/190.3 kB 19.7 MB/s eta 0:00:00
+Collecting safetensors (from -r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 6))
+  Downloading safetensors-0.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 15.3 MB/s eta 0:00:00
+Collecting accelerate (from -r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 7))
+  Downloading accelerate-0.18.0-py3-none-any.whl (215 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.3/215.3 kB 14.5 MB/s eta 0:00:00
+Requirement already satisfied: Flask>=0.8 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1)) (2.2.3)
+Collecting requests (from flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1))
+  Using cached requests-2.28.2-py3-none-any.whl (62 kB)
+Collecting filelock (from transformers==4.24.0->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 4))
+  Downloading filelock-3.11.0-py3-none-any.whl (10.0 kB)
+Collecting numpy>=1.17 (from transformers==4.24.0->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 4))
+  Downloading numpy-1.24.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.3/17.3 MB 15.6 MB/s eta 0:00:00
+Requirement already satisfied: packaging>=20.0 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from transformers==4.24.0->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 4)) (23.1)
+Requirement already satisfied: pyyaml>=5.1 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from transformers==4.24.0->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 4)) (6.0)
+Collecting regex!=2019.12.17 (from transformers==4.24.0->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 4))
+  Downloading regex-2023.3.23-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (771 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 771.9/771.9 kB 16.9 MB/s eta 0:00:00
+Collecting tokenizers!=0.11.3,<0.14,>=0.11.1 (from transformers==4.24.0->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 4))
+  Downloading tokenizers-0.13.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 16.6 MB/s eta 0:00:00
+Collecting tqdm>=4.27 (from transformers==4.24.0->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 4))
+  Using cached tqdm-4.65.0-py3-none-any.whl (77 kB)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from huggingface_hub==0.12.1->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 5)) (4.5.0)
+Requirement already satisfied: psutil in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from accelerate->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 7)) (5.9.4)
+Requirement already satisfied: torch>=1.4.0 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from accelerate->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 7)) (1.11.0)
+Requirement already satisfied: Werkzeug>=2.2.2 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from Flask>=0.8->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1)) (2.2.3)
+Requirement already satisfied: Jinja2>=3.0 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from Flask>=0.8->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1)) (3.1.2)
+Requirement already satisfied: itsdangerous>=2.0 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from Flask>=0.8->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1)) (2.1.2)
+Requirement already satisfied: click>=8.0 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from Flask>=0.8->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1)) (8.1.3)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from Flask>=0.8->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1)) (6.4.1)
+Collecting charset-normalizer<4,>=2 (from requests->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1))
+  Downloading charset_normalizer-3.1.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (195 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.9/195.9 kB 16.2 MB/s eta 0:00:00
+Requirement already satisfied: idna<4,>=2.5 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from requests->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1)) (3.4)
+Collecting urllib3<1.27,>=1.21.1 (from requests->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1))
+  Downloading urllib3-1.26.15-py2.py3-none-any.whl (140 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.9/140.9 kB 19.0 MB/s eta 0:00:00
+Collecting certifi>=2017.4.17 (from requests->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1))
+  Downloading certifi-2022.12.7-py3-none-any.whl (155 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.3/155.3 kB 17.9 MB/s eta 0:00:00
+Requirement already satisfied: zipp>=0.5 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from importlib-metadata>=3.6.0->Flask>=0.8->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1)) (3.15.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages (from Jinja2>=3.0->Flask>=0.8->flask-cloudflared==0.0.10->-r /home/ian/KoboldAI-Client/environments/mambafx3by9rP0Rl (line 1)) (2.1.2)
+Building wheels for collected packages: mkultra
+  Building wheel for mkultra (setup.py) ... done
+  Created wheel for mkultra: filename=mkultra-0.1-py3-none-any.whl size=10897 sha256=742507c145f7923f411170218c71ca89bbcde78ce42b89b26cd05292eef1f147
+  Stored in directory: /tmp/pip-ephem-wheel-cache-log0a3b8/wheels/77/56/b4/04000e4fb8373f67036809acffcfae03323cb96f6694b26277
+Successfully built mkultra
+Installing collected packages: tokenizers, safetensors, mkultra, lupa, urllib3, tqdm, regex, numpy, filelock, charset-normalizer, certifi, requests, accelerate, huggingface_hub, flask-ngrok, flask-cloudflared, transformers
+Successfully installed accelerate-0.18.0 certifi-2022.12.7 charset-normalizer-3.1.0 filelock-3.11.0 flask-cloudflared-0.0.10 flask-ngrok-0.0.25 huggingface_hub-0.12.1 lupa-1.10 mkultra-0.1 numpy-1.24.2 regex-2023.3.23 requests-2.28.2 safetensors-0.3.0 tokenizers-0.13.3 tqdm-4.65.0 transformers-4.24.0 urllib3-1.26.15
+INIT       | Starting   | Flask
+INIT       | OK         | Flask
+INIT       | Starting   | Webserver
+INIT       | Starting   | LUA bridge
+INIT       | OK         | LUA bridge
+INIT       | Starting   | LUA Scripts
+INIT       | OK         | LUA Scripts
+INIT       | OK         | Webserver
+MESSAGE    | Webserver started! You may now connect with a browser at http://127.0.0.1:5000
+INFO       | __main__:do_connect:3542 - Client connected!
+INFO       | __main__:do_connect:3542 - Client connected!
+Exception in thread Thread-66:
+Traceback (most recent call last):
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages/socketio/server.py", line 731, in _handle_event_internal
+    r = server._trigger_event(data[0], namespace, sid, *data[1:])
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages/socketio/server.py", line 756, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages/flask_socketio/__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages/flask_socketio/__init__.py", line 828, in _handle_event
+    ret = handler(*args)
+  File "aiserver.py", line 466, in g
+    return f(*a, **k)
+  File "aiserver.py", line 3915, in get_message
+    load_model(use_gpu=msg['use_gpu'], gpu_layers=msg['gpu_layers'], disk_layers=msg['disk_layers'], online_model=msg['online_model'])
+  File "aiserver.py", line 2241, in load_model
+    model_config = AutoConfig.from_pretrained("models/{}".format(vars.custmodpth.replace('/', '_')), revision=args.revision, cache_dir="cache")
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 776, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages/transformers/configuration_utils.py", line 559, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages/transformers/configuration_utils.py", line 614, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/ian/KoboldAI-Client/runtime/envs/koboldai/lib/python3.8/site-packages/transformers/utils/hub.py", line 380, in cached_file
+    raise EnvironmentError(
+OSError: models/ does not appear to have a file named config.json. Checkout 'https://huggingface.co/models//None' for available files.
+^A
