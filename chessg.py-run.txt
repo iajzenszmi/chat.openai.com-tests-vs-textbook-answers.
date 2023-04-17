@@ -1,3 +1,100 @@
+next line is command input to chat.openai.com.
+"make a chess game with both two human players, a human vs machine mode, and a machine vs machine mode in python3"
+output from chat.openai.com follows:
+----------------------------------------------------------------------------------------------------------------------------
+Sure! Here's a simple implementation of a chess game in Python 3 that includes options for two human players, human vs machine (using a random move generator), and machine vs machine modes. It uses the chess library for basic chess functionality.
+
+python
+
+import chess
+import chess.svg
+import random
+
+# Function to display the chessboard
+def display_board(board):
+    print(board)
+
+# Function for human move input
+def get_human_move(board):
+    while True:
+        try:
+            move = input("Enter your move (e.g. 'e2e4'): ")
+            move = chess.Move.from_uci(move)
+            if move in board.legal_moves:
+                return move
+            else:
+                print("Invalid move. Please try again.")
+        except:
+            print("Invalid input. Please try again.")
+
+# Function for random move generator for machine player
+def get_random_move(board):
+    legal_moves = [move for move in board.legal_moves]
+    return random.choice(legal_moves)
+
+# Function for human vs human mode
+def human_vs_human():
+    board = chess.Board()
+
+    while not board.is_game_over():
+        display_board(board)
+        move = get_human_move(board)
+        board.push(move)
+
+    print("Game Over: " + board.result())
+
+# Function for human vs machine mode
+def human_vs_machine():
+    board = chess.Board()
+
+    while not board.is_game_over():
+        display_board(board)
+
+        if board.turn:
+            move = get_human_move(board)
+        else:
+            move = get_random_move(board)
+
+        board.push(move)
+
+    print("Game Over: " + board.result())
+
+# Function for machine vs machine mode
+def machine_vs_machine():
+    board = chess.Board()
+
+    while not board.is_game_over():
+        display_board(board)
+        move = get_random_move(board)
+        board.push(move)
+
+    print("Game Over: " + board.result())
+
+# Main function
+def main():
+    print("Welcome to Chess!")
+    print("Select a mode:")
+    print("1. Human vs Human")
+    print("2. Human vs Machine")
+    print("3. Machine vs Machine")
+
+    mode = input("Enter mode (1/2/3): ")
+
+    if mode == '1':
+        human_vs_human()
+    elif mode == '2':
+        human_vs_machine()
+    elif mode == '3':
+        machine_vs_machine()
+    else:
+        print("Invalid input. Exiting...")
+
+if __name__ == "__main__":
+    main()
+
+You can run this code in a Python 3 environment, and it will display a simple command-line interface for playing chess. To make moves, you can enter them in UCI (Universal Chess Interface) format, such as 'e2e4' to move a pawn from e2 to e4. The game will continue until checkmate, stalemate, or other game-ending conditions are met. In human vs machine mode, the machine player will make random moves. Note that this implementation does not include advanced chess AI algorithms, and the machine player's moves are purely random. You can enhance the machine player's logic by incorporating more sophisticated AI techniques, such as minimax, alpha-beta pruning, or using an external chess engine like Stockfish.
+
+------------------------------------------------------------------------------------------------------------------------------
 import chess
 import chess.svg
 import random
