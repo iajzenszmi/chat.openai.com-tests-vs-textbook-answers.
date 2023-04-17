@@ -1,4 +1,4 @@
-next line is command input to chat.openai.com.
+next line is command input to chat.openai.com. by Ian Martin Ajzenszmidt, residing in Melbourne, Australia.
 "make a chess game with both two human players, a human vs machine mode, and a machine vs machine mode in python3"
 output from chat.openai.com follows:
 ----------------------------------------------------------------------------------------------------------------------------
