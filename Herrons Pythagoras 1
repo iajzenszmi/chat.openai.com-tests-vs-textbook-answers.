@@ -1,0 +1,74 @@
+
+Model: Default (GPT-3.5)
+Ian Ajzenszmidt
+Herons Formula and three dimensional pythagoras  theorem. Worked examples with integer values and program code.
+
+Heron's Formula:
+
+Heron's Formula is a formula to calculate the area of a triangle when the length of all three sides is known. The formula is:
+
+Area = sqrt(s(s-a)(s-b)(s-c))
+
+where s = (a+b+c)/2 and a, b, and c are the lengths of the sides of the triangle.
+
+Here's an example program in Python that implements Heron's Formula:
+
+python
+
+import math
+
+def heron_formula(a, b, c):
+    s = (a + b + c) / 2
+    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+    return area
+
+# Example usage:
+a = 3
+b = 4
+c = 5
+area = heron_formula(a, b, c)
+print(f"The area of the triangle with sides {a}, {b}, and {c} is {area}.")
+
+Output:
+
+csharp
+
+The area of the triangle with sides 3, 4, and 5 is 6.0.
+
+Three Dimensional Pythagoras Theorem:
+
+The three-dimensional Pythagoras theorem is a generalization of the Pythagoras theorem in two dimensions. It states that in a right-angled triangle in three dimensions, the square of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the other two sides.
+
+The formula is:
+
+c^2 = a^2 + b^2
+
+Here's an example program in Python that implements the three-dimensional Pythagoras theorem:
+
+python
+
+def three_d_pythagoras(a, b, c):
+    if c**2 == a**2 + b**2:
+        return True
+    else:
+        return False
+
+# Example usage:
+a = 3
+b = 4
+c = 5
+if three_d_pythagoras(a, b, c):
+    print(f"The triangle with sides {a}, {b}, and {c} is a right-angled triangle.")
+else:
+    print(f"The triangle with sides {a}, {b}, and {c} is not a right-angled triangle.")
+
+Output:
+
+csharp
+
+The triangle with sides 3, 4, and 5 is a right-angled triangle.
+
+Note: In the above examples, we have used integer values. However, the formulas work for any positive real numbers.
+ChatGPT Mar 23 Version. ChatGPT may produce inaccurate information about people, places, or facts.
+
+
