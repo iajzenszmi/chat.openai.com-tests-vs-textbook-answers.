@@ -1,0 +1,56 @@
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ ipython3 naturallogarithms.py
+Enter the number to find the logarithm: 7
+Natural logarithm of 7.0 is: 1.9459101490553132
+Enter the desired base for the logarithm: 10
+Logarithm base 10.0 of 7.0 is: 0.8450980400142567
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ cat naturallogarithms.py
+import math
+
+def natural_logarithm(number):
+    return math.log(number)
+
+def log_base(base, number):
+    return math.log(number) / math.log(base)
+
+if __name__ == "__main__":
+    number = float(input("Enter the number to find the logarithm: "))
+    ln_result = natural_logarithm(number)
+    print(f"Natural logarithm of {number} is: {ln_result}")
+
+    base = float(input("Enter the desired base for the logarithm: "))
+    log_result = log_base(base, number)
+    print(f"Logarithm base {base} of {number} is: {log_result}")
+
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ sloccount naturallogarithms.py
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/naturallogarithms.py to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+12      top_dir         python=12
+
+
+Totals grouped by language (dominant language first):
+python:          12 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 12
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.02)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.05 (0.60)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.04
+Total Estimated Cost to Develop                           = $ 260
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
