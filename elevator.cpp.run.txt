@@ -1,0 +1,101 @@
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ g++ elevator.cpp
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ ./a.out
+Processing elevator requests...
+From floor 1 to floor 5
+Travel time: 4
+From floor 3 to floor 7
+Travel time: 10
+From floor 4 to floor 9
+Travel time: 18
+From floor 6 to floor 2
+Travel time: 25
+From floor 8 to floor 10
+Travel time: 33
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ cat elevator.cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iomanip>
+
+class Elevator {
+public:
+    Elevator(int max_floor, int capacity) : max_floor(max_floor), capacity(capacity) {}
+
+    void add_request(int from, int to) {
+        requests.push_back({from, to});
+    }
+
+    void process_requests() {
+        sort_requests();
+        int current_floor = 1;
+        for (const auto& request : requests) {
+            int from = request.first;
+            int to = request.second;
+            travel_time += std::abs(current_floor - from) + std::abs(from - to);
+            current_floor = to;
+
+            std::cout << "From floor " << from << " to floor " << to << std::endl;
+            std::cout << "Travel time: " << travel_time << std::endl;
+        }
+    }
+
+private:
+    void sort_requests() {
+        std::sort(requests.begin(), requests.end());
+    }
+
+    int max_floor;
+    int capacity;
+    int travel_time = 0;
+    std::vector<std::pair<int, int>> requests;
+};
+
+int main() {
+    Elevator elevator(10, 5);
+
+    elevator.add_request(1, 5);
+    elevator.add_request(4, 9);
+    elevator.add_request(3, 7);
+    elevator.add_request(6, 2);
+    elevator.add_request(8, 10);
+
+    std::cout << "Processing elevator requests..." << std::endl;
+    elevator.process_requests();
+
+    return 0;
+}
+
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ sloccount elevator.cpp
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/elevator.cpp to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+42      top_dir         cpp=42
+
+
+Totals grouped by language (dominant language first):
+cpp:             42 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 42
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.09)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.08 (0.98)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.09
+Total Estimated Cost to Develop                           = $ 968
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+
