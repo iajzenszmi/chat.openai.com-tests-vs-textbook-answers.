@@ -1,0 +1,98 @@
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ gfortran liftsim.f -ffree-form -ffast-math -o liftsim
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ ./liftsim
+ Current floor:           1
+
+5   
+ Stopping at floor:           5
+ Current floor:           5
+6
+ Stopping at floor:           6
+ Current floor:           6
+3
+ Stopping at floor:           3
+ Current floor:           3
+7
+ Stopping at floor:           7
+ Current floor:           7
+12
+ Stopping at floor:          12
+ Current floor:          12
+^C
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ cat liftsim.f
+PROGRAM lift_sim
+
+INTEGER current_floor, destination_floor, direction
+INTEGER floors(10)
+LOGICAL stop(10)
+
+! Initialize the floors and stop array
+DO i = 1, 10
+  floors(i) = i
+  stop(i) = .FALSE.
+ENDDO
+
+! Start at ground floor
+current_floor = 1
+direction = 1
+
+! Main loop
+DO WHILE (.TRUE.)
+  WRITE(*,*) "Current floor:", current_floor
+
+  ! Set the destination floor based on button presses
+  READ(*,*) destination_floor
+  stop(destination_floor) = .TRUE.
+
+  ! Determine the direction to travel
+  IF (destination_floor > current_floor) THEN
+    direction = 1
+  ELSEIF (destination_floor < current_floor) THEN
+    direction = -1
+  ENDIF
+
+  ! Travel to the destination floor
+  DO WHILE (current_floor /= destination_floor)
+    current_floor = current_floor + direction
+    IF (stop(current_floor)) THEN
+      WRITE(*,*) "Stopping at floor:", current_floor
+      stop(current_floor) = .FALSE.
+    ENDIF
+  ENDDO
+ENDDO
+
+END PROGRAM lift_sim
+
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ sloccount liftsim.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/liftsim.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+27      top_dir         fortran=27
+
+
+Totals grouped by language (dominant language first):
+fortran:         27 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 27
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.05)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.07 (0.83)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.07
+Total Estimated Cost to Develop                           = $ 609
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+
