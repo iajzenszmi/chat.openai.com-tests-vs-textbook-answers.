@@ -1,0 +1,52 @@
+Algorithm LiftSimulation
+
+Input:
+    Number of floors: N
+    Lift capacity: C
+    Number of passengers: P
+    Passenger requests: requests[N]
+
+Output:
+    Lift movements and stops
+
+Begin
+    1. Initialize variables
+        - currentPosition ← 0
+        - currentPassengers ← 0
+        - passengerCount[N] ← 0
+        - liftStatus ← "idle"
+        
+    2. Loop until all passenger requests are served
+        - while ∑(passengerCount) < P
+            2.1. Check liftStatus and move accordingly
+                - if liftStatus = "idle"
+                    2.1.1. Find the next floor with a request
+                        - nextFloor ← FindNextRequestFloor(requests, currentPosition)
+                        
+                    2.1.2. If nextFloor found, move to the floor
+                        - if nextFloor ≠ Null
+                            - currentPosition ← nextFloor
+                            - liftStatus ← "serving"
+                        - else
+                            - break loop
+                - else if liftStatus = "serving"
+                    2.1.3. Update passengers and requests
+                        - requests[currentPosition] ← requests[currentPosition] - 1
+                        - currentPassengers ← currentPassengers + 1
+                        - passengerCount[currentPosition] ← passengerCount[currentPosition] + 1
+                        
+                    2.1.4. Check lift capacity
+                        - if currentPassengers = C
+                            - liftStatus ← "dropping"
+                            
+            2.2. If liftStatus = "dropping", move to the ground floor
+                - if liftStatus = "dropping"
+                    - currentPosition ← 0
+                    - liftStatus ← "idle"
+                    - currentPassengers ← 0
+
+    3. Print lift movements and stops
+        - PrintResults(passengerCount, currentPosition)
+
+End
+
